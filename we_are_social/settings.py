@@ -29,6 +29,11 @@ INSTALLED_APPS = [
     'django_forms_bootstrap',
     'accounts',
     'flat_pages',
+    'paypal.standard.ipn',
+    'paypal_store',
+    'products',
+    'magazines',
+
 ]
 
 MIDDLEWARE = [
@@ -129,3 +134,7 @@ AUTHENTICATION_BACKENDS = (
 
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_1kLoQNn9SVTZ25CghCwPQmXz')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_Y9Z36QsHRrO51HIQiAeZo7DO')
+
+SITE_URL = 'http://127.0.0.1:8000'
+PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = 'arnold-j831@sky.com'

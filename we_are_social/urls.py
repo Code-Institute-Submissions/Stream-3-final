@@ -9,6 +9,9 @@ urlpatterns = [
     url(r'', include('blog.urls')),
     url(r'', include('home.urls')),
     url(r'', include('accounts.urls')),
+    url(r'', include('paypal_store.urls')),
+    url(r'', include('products.urls')),
+    url(r'', include('magazines.urls')),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     url(r'^pages/', include('django.contrib.flatpages.urls')),
 ]
