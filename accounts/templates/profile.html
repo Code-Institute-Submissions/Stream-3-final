@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Logged in as: {{ user.email }}</h2>
+    <p>Stripe id: {{ user.stripe_id }}</p>
+    <h3>Subscription Details:</h3>
+    <p>You have {{ user.subscription_end|timeuntil }} left on your subscription</p>
+    <p>To cancel your subscription, click 'Cancel Subscription' below</p>
+    <p><a href="{% url 'cancel_subscription' %}" class="btn btn-danger">Cancel Subscription</a></p>
+    <script type="text/javascript">
+    function cancelSubscriptionCheck() {
+        if(confirm('Are you sure you want to cancel?')){
+            return true;
+        }
+
+        return false;
+    }
+    </script>
+{% endblock %}

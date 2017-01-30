@@ -24,11 +24,16 @@ INSTALLED_APPS = [
     'home',
     'blog',
     'django.contrib.sites',
+    'django.contrib.flatpages',
     'disqus',
+    'django_forms_bootstrap',
+    'accounts',
+    'flat_pages',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -109,5 +114,18 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
-DISQUS_WEBSITE_SHORTNAME = 'jasocial'
-SITE_ID=1
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+DISQUS_WEBSITE_SHORTNAME = 'localhost'
+SITE_ID = 2
+
+AUTH_USER_MODEL = 'accounts.User'
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.backends.EmailAuth',
+)
+
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_1kLoQNn9SVTZ25CghCwPQmXz')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_Y9Z36QsHRrO51HIQiAeZo7DO')
