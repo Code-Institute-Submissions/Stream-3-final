@@ -33,6 +33,10 @@ INSTALLED_APPS = [
     'paypal_store',
     'products',
     'magazines',
+    #'debug_toolbar',
+    'tinymce',
+    'emoticons',
+    'threads',
 
 ]
 
@@ -45,7 +49,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
+
+INTERNAL_IPS = ('127.0.0.1',)
 
 ROOT_URLCONF = 'we_are_social.urls'
 
@@ -138,3 +145,5 @@ STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_Y9Z36QsHRrO51HIQiAeZo7DO')
 SITE_URL = 'http://127.0.0.1:8000'
 PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
 PAYPAL_RECEIVER_EMAIL = 'arnold-j831@sky.com'
+
+TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')

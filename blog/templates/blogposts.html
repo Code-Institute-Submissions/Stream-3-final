@@ -15,7 +15,7 @@
                         <p>{{ post.content |truncatewords:30 }}</p>
                         <p>
                             <button class="btn btn-default" onclick="location.href={{ post.id }}">Read More</button>
-                            <button class="btn btn-default" onclick="location.href='{% url 'new_post' %}'">New Post</button>
+                            <button class="btn btn-default" onclick="location.href='{% url 'new_blog_post' %}'">New Post</button>
                         </p>
                         <p>{{ post.published_date }}</p>
                     </div>

@@ -11,6 +11,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome-4.6.3/css/font-awesome.css' %}">
         {% block head_js %} {% endblock %}
     </head>
     <body>
@@ -23,6 +24,7 @@
                     <li><a href="/blog/">Blog</a></li>
                     <li><a href="/products/">Products</a></li>
                     <li><a href="/magazines/">Magazines</a></li>
+                    <li><a href="/forum/">Forum</a></li>
                     {% if user.is_authenticated %}
                     <li><a href="{% url 'profile' %}">Profile</a></li>
                     <li><a href="{% url 'logout' %}">Log Out</a></li>
