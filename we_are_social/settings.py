@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'tinymce',
     'emoticons',
     'threads',
+    'polls',
 
 ]
 
