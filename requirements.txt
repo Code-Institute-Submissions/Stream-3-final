@@ -17,3 +17,7 @@ requests==2.13.0
 six==1.10.0
 sqlparse==0.2.2
 stripe==1.46.0
+gunicorn==19.6.0
+python-dateutil==2.6.0
+simplejson==3.10.0
+whitenoise==3.2.3
