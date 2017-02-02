@@ -148,3 +148,11 @@ PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
 PAYPAL_RECEIVER_EMAIL = 'arnold-j831@sky.com'
 
 TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
+
+DEFAULT_FROM_EMAIL = 'catkin.order@gmail.com'
+SERVER_EMAIL = 'catkin.order@gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'catkin.order@gmail.com'
+EMAIL_HOST_PASSWORD = 'vsylomsty2'

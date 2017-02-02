@@ -1,7 +1,21 @@
 from models import User
 
 class EmailAuth(object):
-    def authenticate(self, email=None, password=None):
+    def authenticate(self, email=None, password=None, allownopassword=False):
+        try:
+            user = User.objects.get(email=email)
+            if allownopassword:
+                return user
+            else:
+                if user.is_active == False:
+                    return None
+                else:
+                    if user.check_password(password):
+                        return user
+
+        except User.DoesNotExist:
+            return None
+    def authenticate_old(self, email=None, password=None):
         try:
             user = User.objects.get(email=email)
             if user.check_password(password):

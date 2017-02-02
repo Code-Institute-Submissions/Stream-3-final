@@ -43,3 +43,36 @@ class UserRegistrationForm(UserCreationForm):
 class UserLoginForm(forms.Form):
     email = forms.EmailField()
     password  = forms.CharField(widget=forms.PasswordInput)
+
+class UserResetForm(forms.Form):
+    username = forms.CharField(label="User Email", widget=forms.TextInput(attrs={'readonly': 'readonly'}))
+    hashemail = forms.CharField(widget=forms.HiddenInput())
+
+class ResetPasswordForm(forms.ModelForm):
+
+    username = forms.CharField(label="User Email", widget=forms.TextInput(attrs={'readonly':'readonly'}))
+    password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
+    password2 = forms.CharField(label='Repeat Password', widget=forms.PasswordInput)
+
+    class Meta:
+        model = User
+        fields = ['username', 'password1', 'password2']
+
+    def clean_password2(self):
+        password1 = self.cleaned_data.get('password1')
+        password2 = self.cleaned_data.get('password2')
+
+        if not password2:
+            raise forms.ValidationError("You must confirm your password")
+        if password1 != password2:
+            raise forms.ValidationError("Your passwords do not match")
+        return password2
+
+    def save(self, commit=True):
+        instance = super(ResetPasswordForm, self).save(commit=False)
+        instance.set_password(self.cleaned_data["password2"])
+        instance.is_active = True
+        if commit:
+            instance.save()
+
+        return instance
