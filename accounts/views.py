@@ -48,10 +48,12 @@ def register(request):
                 #if customer.paid:
                     user = form.save()
                     #user = auth.authenticate(email=request.POST.get('email'), password=request.POST.get('password1'))
-                    user.stripe_id = customer.stripe_id
+                    user.stripe_id = customer.id#customer.stripe_id
                     user.subscription_end = arrow.now().replace(weeks=+4).datetime
                     user.save()
                     if user:
+                        user = auth.authenticate(email=subemail, password='password', allownopassword=True)
+                        auth.login(request, user)
                         auth.login(request, user)
                         messages.success(request, "You have successfully registered")
                         return redirect(reverse('profile'))
@@ -68,6 +70,7 @@ def register(request):
     return render(request, 'register.html', args)
 @login_required(login_url='/login/')
 def cancel_subscription(request):
+    print "test", request.user, request.user.id, request.user.stripe_id
     try:
         customer = stripe.Customer.retrieve(request.user.stripe_id)
         customer.cancel_subscription(at_period_end=True)

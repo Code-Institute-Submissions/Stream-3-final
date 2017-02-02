@@ -7,7 +7,8 @@ urlpatterns = [
     url(r'^login/$', views.login, name='login'),
     url(r'^logout/$', views.logout, name='logout'),
     url(r'^cancel_subscription/$', views.cancel_subscription, name='cancel_subscription'),
-    url(r'^resetuser', views.reset_user, name='resetuser'),
-    url(r'^reset', views.reset, name='reset'),
+    url(r'^resetuser/$', views.reset_user, name='resetuser'),
+    url(r'^reset/$', views.reset, name='reset'),
+    url(r'^subecription_webhook/$', views.subscriptions_webhook, name='subscription_webhook'),
 
 ]
