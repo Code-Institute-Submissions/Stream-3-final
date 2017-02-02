@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
+{% block content_header %}
+        <h1 class="homeHeading">We Are Social</h1>
+        <h2 class="homeHeading">{{ flatpage.title }}</h2>
 
+{% endblock %}
 {% block content %}
-    <h1>{{ flatpage.title }}</h1>
 {{ flatpage.content }}
     <div class="row">
         <div class="col-md-12">

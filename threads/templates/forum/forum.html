@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load thread_extras %}
 {% load bootstrap_tags %}
+{% block content_header %}
+<h1 class="homeHeading">We Are Social - Forum</h1>
+<h2 class="homeHeading">This is where YOU get to talk about your ideas</h2>
+{% endblock %}
 {% block content %}
 {% for subject in subjects %}
     <section class="subject">

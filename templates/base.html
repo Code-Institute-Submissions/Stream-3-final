@@ -29,7 +29,6 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/">Home</a></li>
                     <li><a href="/pages/about">About</a></li>
-                    <li><a href="#">Contact</a></li>
                     <li><a href="/blog/">Blog</a></li>
                     <li><a href="/products/">Products</a></li>
                     <li><a href="/forum/">Forum</a></li>
@@ -47,18 +46,17 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-        <header>
+    <header>
         <div class="header-content">
             <div class="header-content-inner">
                 {% block content_header %}
                 {% endblock %}
-
             </div>
         </div>
     </header>
+
+    {% if messages %}
         <div class="container">
-            <hr>
-            {% if messages %}
             <div class="alert alert-success">
                 <div class="messages">
                     {% for message in messages %}
@@ -66,14 +64,17 @@
                     {% endfor %}
                 </div>
             </div>
-            {% endif %}
-
-                {% block content %}
-                {% endblock %}
-            <footer>
-                <div class="container">
-                </div>
-            </footer>
         </div>
+    {% endif %}
+    <section>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+        </div>
+    </footer>
     </body>
 </html>
