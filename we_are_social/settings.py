@@ -130,7 +130,7 @@ STATICFILES_DIRS = (
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-DISQUS_WEBSITE_SHORTNAME = 'jasocial'#'nielsstackblog'#'localhost'
+DISQUS_WEBSITE_SHORTNAME = 'mybootcampblog'#'jasocial'#'nielsstackblog'#'localhost'
 SITE_ID = 2
 
 AUTH_USER_MODEL = 'accounts.User'
