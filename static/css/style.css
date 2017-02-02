@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
-body { padding-top: 70px;
+body { padding-top: 30px;
        font-family: Roboto, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 .navbar-default {
@@ -31,4 +31,52 @@ body { padding-top: 70px;
 h1, h2, h3, h4 {
     font-family: Roboto, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     color: #000;
+}
+
+#homeHeading {
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 80px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: url('../img/header.jpg');
+  text-align: center;
+  color: white;
+}
+
+header .header-content {
+  position: relative;
+  text-align: center;
+  padding: 100px 15px 100px;
+  width: 100%;
+}
+header .header-content .header-content-inner h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 30px;
+}
+header .header-content .header-content-inner hr {
+  margin: 30px auto;
+}
+header .header-content .header-content-inner p {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  margin-bottom: 50px;
 }

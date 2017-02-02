@@ -47,6 +47,15 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+        <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                {% block content_header %}
+                {% endblock %}
+
+            </div>
+        </div>
+    </header>
         <div class="container">
             <hr>
             {% if messages %}
@@ -58,11 +67,9 @@
                 </div>
             </div>
             {% endif %}
-            <div class="container">
+
                 {% block content %}
                 {% endblock %}
-            </div>
-
             <footer>
                 <div class="container">
                 </div>

@@ -1,4 +1,10 @@
 {% extends "base.html" %}
+
+{% block content_header %}
+<h1 id="homeHeading">We Are Social - Blog</h1>
+<p>Our thoughts on whats happening</p>
+{% endblock %}
+
 {% block content %}
     {% for post in posts %}
         <div class="row">
