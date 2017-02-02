@@ -1,4 +1,8 @@
 {% extends 'base.html' %}
+{% block content_header %}
+<h1 class="homeHeading">Register</h1>
+<h2 class="homeHeading">A Small Price to Pay</h2>
+{% endblock %}
 {% load bootstrap_tags %}
 {% load staticfiles %}
 {% block head_js %}
@@ -11,18 +15,22 @@
     <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
 {% endblock %}
 {% block content %}
-    <form action="{% url 'register' %}" method="POST" id="register-form">
-        <div id="credit-card-errors" style="display:none;">
-            <div class="alert-message block-message error" id="stripe-error-message"></div>
-        </div>
-        <fieldset>
-            <legend>Create a new account</legend>
-            {% csrf_token %}
-            {{ form | as_bootstrap }}
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Validate Credit card" id="calidate_card_btn" name="commit">
+    <div class="container">
+        <article>
+            <section>Register with We Are Social</section>
+        </article>
+        <form action="{% url 'register' %}" method="POST" id="register-form">
+            <div id="credit-card-errors" style="display:none;">
+                <div class="alert-message block-message error" id="stripe-error-message"></div>
             </div>
-        </fieldset>
-    </form>
-
+            <fieldset>
+                <legend>Create a new account</legend>
+                {% csrf_token %}
+                {{ form | as_bootstrap }}
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Validate Credit card" id="calidate_card_btn" name="commit">
+                </div>
+            </fieldset>
+        </form>
+    </div>
 {% endblock %}
