@@ -90,7 +90,25 @@ def login(request):
                 messages.error(request, "You have successfully logged in")
                 return redirect(reverse('profile'))
             else:
-                form.add_error(None, "Your email or password were not recognised")
+                subemail=request.POST.get('email')
+                userExists = User.objects.filter(email=subemail)
+
+                import hashlib
+                hashemail = hashlib.sha256("jatest" + subemail)
+                hexemail = hashemail.hexdigest()
+
+                if userExists:
+                    domain = request.META.get('HTTP_HOST')
+                    if domain == "127.0.0.1:8000":
+                        resetlink = "http://127.0.0.1:8000/resetuser?email=" + subemail + "&email2=" + hexemail
+                        loginlink = "http://127.0.0.1:8000/login/"
+                    else:
+                        resetlink = "http://johnarnold-stream3.herokuapp.com/resetuser?email=" + subemail + "&email2=" + hexemail
+                        loginlink = "http://johnarnold-stream3.herokuapp.com/login/"
+                    messages.error(request, mark_safe(
+                        "Your email is recognised, but your password is incorrect.  Please try again.  If you have forgotten your password, <a href='" + resetlink + "' title='Click Here to Reset Your Password'>Reset You Password</a>."))
+                else:
+                    messages.error(request, "User Not Recognised")
     else:
         form = UserLoginForm()
     args = {'form': form}
