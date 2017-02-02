@@ -56,25 +56,24 @@
     </header>
 
     {% if messages %}
-        <div class="container">
-            <div class="alert alert-success">
-                <div class="messages">
-                    {% for message in messages %}
-                        {{ message }}
-                    {% endfor %}
+        <div class="alert-fixed">
+            <div class="container">
+                <div class="alert alert-success">
+                    <div class="messages">
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
     {% endif %}
-    <section>
-        <div class="container">
+        <main role="main">
             {% block content %}
             {% endblock %}
-        </div>
-    </section>
+        </main>
     <footer>
-        <div class="container">
-        </div>
+
     </footer>
     </body>
 </html>

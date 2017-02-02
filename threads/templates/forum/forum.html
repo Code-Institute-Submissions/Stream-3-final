@@ -6,24 +6,20 @@
 <h2 class="homeHeading">This is where YOU get to talk about your ideas</h2>
 {% endblock %}
 {% block content %}
-{% for subject in subjects %}
-    <section class="subject">
-        <h2><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></h2>
-        <p><a href="{% url 'threads' subject.id%}">{% autoescape off %} {{ subject.description }} {% endautoescape %}</a> </p>
-        <table class="table">
-            <thead>
-                <tr>
-                    <td>Threads</td>
-                    <td>Posts</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{{ subject.thread.count }}</td>
-                    <td>{{ subject|get_total_subject_posts }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+    <div class="container">
+    {% for subject in subjects %}
+        <article>
+            <section class="subject">
+                <h2><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></h2>
+                <p><a href="{% url 'threads' subject.id%}">{% autoescape off %} {{ subject.description }} {% endautoescape %}</a> </p>
+            </section>
+            <div class="col-md-6">
+                <section>Threads: {{ subject.thread.count }}</section>
+            </div>
+            <div class="col-md-6">
+                <section>Posts: {{ subject|get_total_subject_posts }}</section>
+            </div>
+        </article>
 {% endfor %}
+    </div>
 {% endblock %}
