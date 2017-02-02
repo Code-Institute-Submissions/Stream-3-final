@@ -95,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/accounts/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
-              <caret line="11" column="94" lean-forward="false" selection-start-line="11" selection-start-column="94" selection-end-line="11" selection-end-column="94" />
+              <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -1380,7 +1380,7 @@
     <entry file="file://$PROJECT_DIR$/accounts/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="11" column="94" lean-forward="false" selection-start-line="11" selection-start-column="94" selection-end-line="11" selection-end-column="94" />
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
