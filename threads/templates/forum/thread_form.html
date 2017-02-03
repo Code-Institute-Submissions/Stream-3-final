@@ -16,18 +16,18 @@
 
         }
 
-        //$('#id_question').removeAttr('required');
+        $('#id_question').removeAttr('required');
 
         $('#id_is_a_poll').click(function(el) {
             var poll_form = $('#poll_form')
             if(!$('#id_is_a_poll').prop('checked')) {
                 console.log("checked")
                 poll_form.hide()
-                //$('#id_question').removeAttr('required');
+                $('#id_question').removeAttr('required');
             } else {
                 console.log("unchecked")
                 poll_form.show()
-                //$('#id_question').attr('required', 'required');
+                $('#id_question').attr('required', 'required');
             }
 
 
