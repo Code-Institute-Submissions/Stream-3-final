@@ -6,7 +6,7 @@
 <h2 class="homeHeading">{{ subject.name }}</h2>
 {% endblock %}
 {% block content %}
-
+<div class="container">
     <div class="col-md-12">
     {% if user.is_authenticated %}
         <p><a href="{% url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a> </p>
@@ -15,4 +15,5 @@
         {% include "forum/threads_items.html" %}
     {% endfor %}
     </div>
+</div>
 {% endblock %}

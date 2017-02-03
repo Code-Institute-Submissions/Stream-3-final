@@ -2,13 +2,13 @@ from django import forms
 from .models import Poll, PollSubject
 
 class PollForm(forms.ModelForm):
-    question = forms.CharField(label="What is your poll about?")
+    question = forms.CharField(label="What is your poll about?", required=False)
     class Meta:
         model = Poll
         fields=['question']
 
 class PollSubjectForm(forms.ModelForm):
-    name = forms.CharField(label="Poll Subject Name", required=True)
+    name = forms.CharField(label="Poll Subject Name", required=False)
 
     def __init__(self, *args, **kwargs):
         super(PollSubjectForm, self).__init__(*args, **kwargs)

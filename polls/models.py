@@ -16,7 +16,7 @@ class PollSubject(models.Model):
     def __unicode__(self):
         return self.name
 
-class Vode(models.Model):
+class Vote(models.Model):
     poll = models.ForeignKey(Poll, related_name='votes')
     subject = models.ForeignKey(PollSubject, related_name='votes')
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='votes')

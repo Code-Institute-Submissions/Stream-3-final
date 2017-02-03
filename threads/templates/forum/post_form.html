@@ -8,15 +8,17 @@
 </script>
 {% endblock %}
 {% block content %}
-<section>
-    <div class="col-md-9">
-        <form method="post" action="{{ form_action }}">
-            {% csrf_token %}
-            {{ form|as_bootstrap }}
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="{{ button_text }}">
-            </div>
-        </form>
-    </div>
-</section>
+<div class="container">
+    <section>
+        <div class="col-md-9">
+            <form method="post" action="{{ form_action }}">
+                {% csrf_token %}
+                {{ form|as_bootstrap }}
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="{{ button_text }}">
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
 {% endblock %}

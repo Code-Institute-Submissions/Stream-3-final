@@ -24,35 +24,55 @@ def threads(request, subject_id):
 @login_required
 def new_thread(request, subject_id):
     subject = get_object_or_404(Subject, pk=subject_id)
+    print "subject_id:",subject_id
     poll_subject_formset = formset_factory(PollSubjectForm, extra=3)
     if request.method == 'POST':
+        ispoll = request.POST.get('is_a_poll')
+        print "ispoll:",ispoll
         thread_form = ThreadForm(request.POST)
         post_form = PostForm(request.POST)
-        poll_form = PollForm(request.POST)
-        poll_subject_formset = poll_subject_formset(request.POST)
-        if thread_form.is_valid() and post_form.is_valid() and poll_form.is_valid() and poll_subject_formset.is_valid():
-            thread = thread_form.save(False)
-            thread.subject = subject
-            thread.user = request.user
-            thread.save()
+        if request.POST.get('is_a_poll', None):
+            poll_form = PollForm(request.POST)
+            # print "poll_form:", poll_form
+            poll_subject_formset = poll_subject_formset(request.POST)
+            if thread_form.is_valid() and post_form.is_valid() and poll_form.is_valid() and poll_subject_formset.is_valid():
+                thread = thread_form.save(False)
+                thread.subject = subject
+                thread.user = request.user
+                thread.save()
 
-            post = post_form.save(False)
-            post.user = request.user
-            post.thread = thread
-            post.save()
-            if request.POST.get('is_a_poll', None):
+                post = post_form.save(False)
+                post.user = request.user
+                post.thread = thread
+                post.save()
+
                 poll = poll_form.save(False)
                 poll.thread = thread
                 poll.save()
 
-            for subject_form in poll_subject_formset:
-                subject = subject_form.save(False)
-                subject.poll = poll
-                subject.save()
+                for subject_form in poll_subject_formset:
+                    subject = subject_form.save(False)
+                    subject.poll = poll
+                    subject.save()
+                messages.success(request, "Your new thread has been created")
 
-            messages.success(request, "Your new thread has been created")
+                return redirect(reverse('thread', args={thread.pk}))
+        else:
+            if thread_form.is_valid() and post_form.is_valid():
+                thread = thread_form.save(False)
+                thread.subject = subject
+                thread.user = request.user
+                thread.save()
 
-            return redirect(reverse('thread', args={thread.pk}))
+                post = post_form.save(False)
+                post.user = request.user
+                post.thread = thread
+                post.save()
+
+                messages.success(request, "Your new thread has been created")
+
+                return redirect(reverse('thread', args={thread.pk}))
+
     else:
         thread_form = ThreadForm()
         post_form = PostForm(request.POST)

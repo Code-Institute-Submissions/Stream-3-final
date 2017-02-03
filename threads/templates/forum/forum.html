@@ -13,11 +13,14 @@
                 <h2><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></h2>
                 <p><a href="{% url 'threads' subject.id%}">{% autoescape off %} {{ subject.description }} {% endautoescape %}</a> </p>
             </section>
-            <div class="col-md-6">
-                <section>Threads: {{ subject.thread.count }}</section>
+            <div class="col-md-4">
+                <section>Number of Live Debates in this Forum: {{ subject.thread.count }}</section>
             </div>
-            <div class="col-md-6">
-                <section>Posts: {{ subject|get_total_subject_posts }}</section>
+            <div class="col-md-4">
+                <section>Number of Posts: {{ subject|get_total_subject_posts }}</section>
+            </div>
+            <div class="col-md-4">
+                <section><a class="btn btn-info" href="{% url 'threads' subject.id%}">Enter Forum</a></section>
             </div>
         </article>
 {% endfor %}
