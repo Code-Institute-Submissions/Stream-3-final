@@ -41,15 +41,21 @@
     })
 </script>
 {% endblock %}
+{% block content_header %}
+<h1 class="homeHeading">We Are Social - Forum</h1>
+<h2 class="homeHeading">Create a Discussion</h2>
+{% endblock %}
 {% block content %}
 <div class="container">
     <section>
         <div class="col-md-9">
+            <h3>Create a discussion within this forum, if you like you can add a poll to the discussion to get your fellow members to vote on a subject.</h3>
             <form method="POST" action="{% url 'new_thread' subject.id %}">
                 {% csrf_token %}
                 <div class="form-group">
                     {{ thread_form|as_bootstrap }}
                     <hr>
+                    <p>If you want to you can add a comment to your discussion to get the ball rolling</p>
                     {{ post_form|as_bootstrap }}
                 </div>
                 <div id="poll_form" class="form-group">

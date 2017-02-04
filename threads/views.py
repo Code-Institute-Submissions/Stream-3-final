@@ -106,7 +106,7 @@ def new_post(request, thread_id):
             return redirect(reverse('thread', args={thread.pk}))
     else:
         form = PostForm()
-    args = {'form': form, 'form_action': reverse('new_post', args={thread.id}), 'button_text': 'Update Post'}
+    args = {'form': form, 'form_action': reverse('new_post', args={thread.id}), 'button_text': 'Update Post', 'thread': thread}
     args.update(csrf(request))
 
     return render(request,'forum/post_form.html', args)

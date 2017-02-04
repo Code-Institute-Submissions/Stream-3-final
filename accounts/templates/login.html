@@ -1,20 +1,48 @@
 {% extends 'base.html' %}
 {% load bootstrap_tags %}
+{% load staticfiles %}
+{% block head_js %}
+
+
+{% endblock %}
 {% block content_header %}
 <h1 class="homeHeading">Log In</h1>
 <h2 class="homeHeading">With Username and Password Below</h2>
 {% endblock %}
 {% block content %}
-    <div class="container">
-        <form method="POST" action="{% url 'login' %}">
-            <fieldset>
-                <legend>Login to We Are Social</legend>
-                {% csrf_token %}
-                {{ form | as_bootstrap }}
-                <div class="form-group">
-                    <input type="submit" class="btn btn-primary" value="Log In">
-                </div>
-            </fieldset>
-        </form>
-    </div>
+    <div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="previewModalLabel">Login </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form method="POST" id="loginForm" name="loginForm">
+                <fieldset>
+                    <legend>Login to We Are Social</legend>
+                    {% csrf_token %}
+                    {{ form | as_bootstrap }}
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Log In" id="login_button">
+                    </div>
+                </fieldset>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+</div>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            console.log( "ready!" );
+            //$('#loginModal').addclass('show');
+            $('#loginModal').modal('show');
+        });
+    </script>
+    <script type="text/javascript" src="{% static 'js/social-ajax.js' %}"></script>
 {% endblock %}

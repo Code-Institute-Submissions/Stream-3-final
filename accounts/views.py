@@ -91,7 +91,7 @@ def login(request):
             if user is not None:
                 auth.login(request, user)
                 messages.error(request, "You have successfully logged in")
-                return redirect(reverse('profile'))
+                #return redirect(reverse('profile'))
             else:
                 subemail=request.POST.get('email')
                 userExists = User.objects.filter(email=subemail)

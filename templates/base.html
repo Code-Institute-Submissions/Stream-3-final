@@ -13,6 +13,18 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="{% static "css/style.css" %}">
         <link rel="stylesheet" href="{% static 'css/font-awesome-4.6.3/css/font-awesome.css' %}">
+        <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            window.setTimeout(function() {
+                $(".alert").fadeTo(1000, 0).slideUp(1000, function(){
+                    $(this).remove();
+                });
+            }, 5000);
+
+        });
+        </script>
         {% block head_js %} {% endblock %}
     </head>
     <body>
@@ -46,6 +58,16 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+        {% if messages %}
+
+        <div class="alert alert-success alert-fixed">
+            <div class="messages">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
     <header>
         <div class="header-content page-head">
             <div class="header-content-inner">
@@ -55,19 +77,7 @@
         </div>
     </header>
 
-    {% if messages %}
-        <div class="alert-fixed">
-            <div class="container">
-                <div class="alert alert-success">
-                    <div class="messages">
-                        {% for message in messages %}
-                            {{ message }}
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    {% endif %}
+
         <main role="main">
             {% block content %}
             {% endblock %}
