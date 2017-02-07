@@ -8,9 +8,10 @@
 {% block content_header %}
 <h1 class="homeHeading">Log In</h1>
 <h2 class="homeHeading">With Username and Password Below</h2>
+<p><a class="btn btn-primary" data-toggle="modal" href="#loginModal">Log In</a> </p>
 {% endblock %}
 {% block content %}
-    <div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">

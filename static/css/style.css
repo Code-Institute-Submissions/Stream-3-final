@@ -62,7 +62,12 @@ h2.homeHeading {
   color: white;
 }*/
 
-
+.btn-primary.outline {
+    background: none;
+    border: 2px solid #0099cc;
+    color: #0099cc;;
+    padding: 12px 22px;
+}
 
 header .header-content {
   position: relative;
@@ -81,6 +86,31 @@ header .header-content .header-content-inner p {
   margin-bottom: 50px;
 }
 
+.home-box1 {
+
+    height: 600px;
+    display: flex;
+    background-color: #7acaff;
+}
+
+.home-box2 {
+
+    height: 300px;
+    display: flex;
+    background-color: firebrick;
+}
+
+.img-full {
+    min-width: 100%;
+    width: 100%;
+    max-height: 600px;
+}
+
+.home-box3 {
+    height: 300px;
+    display: flex;
+    background-color: darkgreen;
+}
 
 .alert-fixed {
     position:fixed;
