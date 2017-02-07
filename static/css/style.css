@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
-body { padding-top: 30px;
+body { padding-top: 50px;
        font-family: Roboto, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 .navbar-default {
@@ -96,8 +96,68 @@ header .header-content .header-content-inner p {
 .home-box2 {
 
     height: 300px;
-    display: flex;
     background-color: firebrick;
+    display: flex;
+    padding: 5px;
+    flex-wrap: nowrap;
+    flex-flow: row wrap;
+}
+
+.home-box2 .footer {
+    flex: 1 100%;
+    order: 4;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;
+    text-align: center;
+}
+
+.home-box2 .main {
+    flex: 2 100%;
+}
+
+.Aligner-item {
+  max-width: 50%;
+}
+
+.Aligner-item-top {
+  align-self: flex-start;
+  background-color: #3c763d;
+}
+
+.Aligner-item-bottom {
+  align-self: flex-end;
+  background-color: #7acaff;
+}
+
+.btn.outline {
+	background: none;
+	padding: 12px 22px;
+    font-weight: bold;
+}
+
+.btn-primary.outline {
+    background: none;
+	border: 2px solid #0099cc;
+	color: #0099cc;
+}
+
+.btn-primary.outline:hover{
+    background-color: #0099cc;
+    color: #000;
+}
+
+.btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+	background: none;
+    color: #33a6cc;
+	border-color: #33a6cc;
+
+}
+.btn-primary.outline:active, .btn-primary.outline.active {
+	border-color: #007299;
+	color: #007299;
+	box-shadow: none;
 }
 
 .img-full {
