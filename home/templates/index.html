@@ -1,9 +1,8 @@
 {% extends 'base-home.html' %}
 
 {% block content_header %}
-        <h1 class="homeHeading">We Are Social</h1>
-        <p>A Social Enterprise for Developers and Community Groups to Share Ideas</p>
-        <a href="/pages/about/" class="btn btn-primary btn-xl">Find Out More</a>
+<h3>{{ posts.title }}</h3>
+<p>{{ posts.content |truncatewords:30 }}</p>
 {% endblock %}
 
 

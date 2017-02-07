@@ -115,6 +115,7 @@ header .header-content .header-content-inner p {
 
 .home-box2 .main {
     flex: 2 100%;
+    text-align: center;
 }
 
 .Aligner-item {
@@ -193,8 +194,8 @@ header .header-content .header-content-inner p {
 
 @media (min-width: 1200px) {
     .page-head{
-    background-image: url('../img/header.jpg');
-    height: 600px;
+
+
     background-repeat: no-repeat;
     background-size:cover;
     display: flex;
@@ -214,8 +215,7 @@ h2.homeHeading {
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .page-head{
-    background-image: url('../img/header.jpg');
-    height: 400px;
+
     background-repeat: no-repeat;
     background-size:cover;
     display: flex;
@@ -231,8 +231,7 @@ h2.homeHeading {
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .page-head{
-    background-image: url('../img/header.jpg');
-    height: 300px;
+
     background-repeat: no-repeat;
     background-size:cover;
     display: flex;
@@ -249,8 +248,7 @@ h2.homeHeading {
 
 @media (max-width: 767px) {
     .page-head{
-    background-image: url('../img/header.jpg');
-    height: 200px;
+
     background-repeat: no-repeat;
     background-size:cover;
     display: flex;
@@ -267,8 +265,7 @@ h2.homeHeading {
 }
 @media (max-width: 480px) {
     .page-head{
-    background-image: url('../img/header.jpg');
-    height: 100px;
+
     background-repeat: no-repeat;
     background-size:cover;
     display: flex;
