@@ -1,291 +1,475 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
-body { padding-top: 50px;
-       font-family: Roboto, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-}
-.navbar-default {
+    body {
+        padding-top: 50px;
+        font-family: Roboto, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    }
+    .navbar-default {
         border: none;
         background: #000;
+    }
+
+    .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus:hover {
+        color: #fff;
+        background-color: #800080;
+        font-weight: bold;
+    }
+
+    .navbar-default .navbar-toggle {
+        color: #fff;
+        background-color: #000000;
+        font-weight: bold;
+        border: 2px solid #800080;
+    }
+
+    .navbar-default .navbar-toggle:hover,
+    .navbar-default .navbar-toggle:focus,
+    .navbar-default .navbar-toggle:active {
+        background-color: #800080;
+        border-color: #800080;
+    }
+
+    h1, h2, h3, h4 {
+        font-family: Roboto, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+        color: #000;
+    }
+
+    .homeHeading {
+        font-family: Roboto, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+    h1.homeHeading {
+        font-size: 80px;
+    }
+    h2.homeHeading {
+        font-size: 50px;
+    }
+
+    .btn-primary.outline {
+        background: none;
+        border: 2px solid #0099cc;
+        color: #0099cc;;
+        padding: 12px 22px;
+    }
+
+    header .header-content {
+      position: relative;
+      text-align: center;
+      padding: 100px 15px 100px;
+      width: 100%;
+    }
+
+    header .header-content .header-content-inner hr {
+      margin: 30px auto;
+    }
+    header .header-content .header-content-inner p {
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 16px;
+      margin-bottom: 50px;
+    }
+
+    .home-box1 {
+
+        height: 600px;
+        padding: 0px;
+        display: flex;
+        background-color: #7acaff;
+    }
+
+    .home-box2 {
+
+        height: 300px;
+        background-color: firebrick;
+        padding: 0px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .home-box2 .footer {
+        flex: 1 100%;
+        order: 4;
+        position:absolute;
+        bottom:0;
+        width:100%;
+        height:60px;
+        text-align: center;
+    }
+
+    .home-box2 .title {
+        flex: 2 100%;
+        text-align: center;
+        padding: 5px;
+        height: auto;
+    }
+
+    .home-box2 .forum {
+        flex: 2 100%;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .home-box3 {
+        height: 300px;
+        display: flex;
+        background-color: darkgreen;
+    }
+
+    .btn.outline {
+        background: none;
+        padding: 12px 22px;
+        font-weight: bold;
+    }
+
+    .btn-primary.outline {
+        background: none;
+        border: 2px solid #0099cc;
+        color: #0099cc;
+    }
+
+    .btn-primary.outline:hover{
+        background-color: #0099cc;
+        color: #000;
+    }
+
+    .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+        background: none;
+        color: #33a6cc;
+        border-color: #33a6cc;
 
     }
-.navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus:hover {
-    color: #fff;
-    background-color: #800080;
-    font-weight: bold;
+    .btn-primary.outline:active, .btn-primary.outline.active {
+        border-color: #007299;
+        color: #007299;
+        box-shadow: none;
+    }
 
-}
+    .img-full {
+        min-width: 100%;
+        width: 100%;
+        max-height: 600px;
+    }
 
-.navbar-default .navbar-toggle {
-    color: #fff;
-    background-color: #000000;
-    font-weight: bold;
-    border: 2px solid #800080;
-}
-
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus,
-.navbar-default .navbar-toggle:active {
-    background-color: #800080;
-    border-color: #800080;
-}
-
-h1, h2, h3, h4 {
-    font-family: Roboto, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-    color: #000;
-}
-
-.homeHeading {
-    font-family: Roboto, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-    color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 0;
-    text-shadow: 2px 2px 4px #000000;
-}
-
-h1.homeHeading {
-    font-size: 80px;
-}
-h2.homeHeading {
-    font-size: 50px;
-}
-/*header {
-  position: relative;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
-
-  text-align: center;
-  color: white;
-}*/
-
-.btn-primary.outline {
-    background: none;
-    border: 2px solid #0099cc;
-    color: #0099cc;;
-    padding: 12px 22px;
-}
-
-header .header-content {
-  position: relative;
-  text-align: center;
-  padding: 100px 15px 100px;
-  width: 100%;
-}
-
-header .header-content .header-content-inner hr {
-  margin: 30px auto;
-}
-header .header-content .header-content-inner p {
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
-  margin-bottom: 50px;
-}
-
-.home-box1 {
-
-    height: 600px;
-    padding: 0px;
-    display: flex;
-    background-color: #7acaff;
-}
-
-.home-box2 {
-
-    height: 300px;
-    background-color: firebrick;
-    padding: 0px;
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.home-box2 .footer {
-    flex: 1 100%;
-    order: 4;
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:60px;
-    text-align: center;
-}
-
-.home-box2 .title {
-    flex: 2 100%;
-    text-align: center;
-    padding: 5px;
-    height: auto;
-}
-
-.home-box2 .forum {
-    flex: 2 100%;
-    text-align: left;
-    padding: 10px;
-}
-
-.Aligner-item {
-  max-width: 50%;
-}
-
-.Aligner-item-top {
-  align-self: flex-start;
-  background-color: #3c763d;
-}
-
-.Aligner-item-bottom {
-  align-self: flex-end;
-  background-color: #7acaff;
-}
-
-.btn.outline {
-	background: none;
-	padding: 12px 22px;
-    font-weight: bold;
-}
-
-.btn-primary.outline {
-    background: none;
-	border: 2px solid #0099cc;
-	color: #0099cc;
-}
-
-.btn-primary.outline:hover{
-    background-color: #0099cc;
-    color: #000;
-}
-
-.btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
-	background: none;
-    color: #33a6cc;
-	border-color: #33a6cc;
-
-}
-.btn-primary.outline:active, .btn-primary.outline.active {
-	border-color: #007299;
-	color: #007299;
-	box-shadow: none;
-}
-
-.img-full {
-    min-width: 100%;
-    width: 100%;
-    max-height: 600px;
-}
-
-.home-box3 {
-    height: 300px;
-    display: flex;
-    background-color: darkgreen;
-}
-
-.alert-fixed {
-    position:fixed;
-    top: 50px;
-    right: 330px;
-    width: 300px;
-    z-index:9999;
-    border: 3px solid #800080;
-    font-size: 20px;
-    font-weight: bold;
-    color: #800080;
-    background-color: #000;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    padding: 8px 35px 8px 14px;
-    margin: 30px;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-}
+    .alert-fixed {
+        position:fixed;
+        top: 50px;
+        right: 330px;
+        width: 300px;
+        z-index:9999;
+        border: 3px solid #800080;
+        font-size: 20px;
+        font-weight: bold;
+        color: #800080;
+        background-color: #000;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        padding: 8px 35px 8px 14px;
+        margin: 30px;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
 
 @media (min-width: 1200px) {
     .page-head{
-
-
-    background-repeat: no-repeat;
-    background-size:cover;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
+        background-repeat: no-repeat;
+        background-size:cover;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 
     h1.homeHeading {
-    font-size: 60px;
-}
-h2.homeHeading {
-    font-size: 40px;
-}
+        font-size: 60px;
+    }
+    h2.homeHeading {
+        font-size: 40px;
+    }
 
+    .home-box1 {
+        height: 600px;
+        padding: 0px;
+        display: flex;
+        background-color: #7acaff;
+    }
+
+    .home-box2 {
+        height: 300px;
+        background-color: firebrick;
+        padding: 0px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .home-box2 .footer {
+        flex: 1 100%;
+        order: 4;
+        position:absolute;
+        bottom:0;
+        width:100%;
+        height:60px;
+        text-align: center;
+    }
+
+    .home-box2 .title {
+        flex: 2 100%;
+        text-align: center;
+        padding: 5px;
+        height: auto;
+    }
+
+    .home-box2 .forum {
+        flex: 2 100%;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .home-box3 {
+        height: 300px;
+        display: flex;
+        background-color: darkgreen;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .page-head{
+        background-repeat: no-repeat;
+        background-size:cover;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .home-box1 {
+        height: 400px;
+        padding: 0px;
+        display: flex;
+        background-color: #7acaff;
+    }
 
-    background-repeat: no-repeat;
-    background-size:cover;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
+    .home-box2 {
+        height: 200px;
+        background-color: firebrick;
+        padding: 0px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .home-box2 .footer {
+        flex: 1 100%;
+        order: 4;
+        position:absolute;
+        bottom:0;
+        width:100%;
+        height:60px;
+        text-align: center;
+    }
+
+    .home-box2 .title {
+        flex: 2 100%;
+        text-align: center;
+        padding: 5px;
+        height: auto;
+    }
+
+    .home-box2 .forum {
+        flex: 2 100%;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .home-box3 {
+        height: 200px;
+        display: flex;
+        background-color: darkgreen;
+    }
     h1.homeHeading {
-    font-size: 50px;
-}
-h2.homeHeading {
-    font-size: 30px;
-}
+        font-size: 50px;
+    }
+    h2.homeHeading {
+        font-size: 30px;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .page-head{
+        background-repeat: no-repeat;
+        background-size:cover;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .home-box1 {
+        height: 300px;
+        padding: 0px;
+        display: flex;
+        background-color: #7acaff;
+    }
 
-    background-repeat: no-repeat;
-    background-size:cover;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
+    .home-box2 {
+        height: 150px;
+        background-color: firebrick;
+        padding: 0px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .home-box2 .footer {
+        flex: 1 100%;
+        order: 4;
+        position:absolute;
+        bottom:0;
+        width:100%;
+        height:60px;
+        text-align: center;
+    }
+
+    .home-box2 .title {
+        flex: 2 100%;
+        text-align: center;
+        padding: 5px;
+        height: auto;
+    }
+
+    .home-box2 .forum {
+        flex: 2 100%;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .home-box3 {
+        height: 150px;
+        display: flex;
+        background-color: darkgreen;
+    }
     h1.homeHeading {
-    font-size: 40px;
-}
+        font-size: 40px;
+    }
     h2.homeHeading {
-    font-size: 25px;
-}
+        font-size: 25px;
+    }
 }
 
 @media (max-width: 767px) {
     .page-head{
+        background-repeat: no-repeat;
+        background-size:cover;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .home-box1 {
+        height: 250px;
+        padding: 0px;
+        display: flex;
+        background-color: #7acaff;
+    }
 
-    background-repeat: no-repeat;
-    background-size:cover;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
+    .home-box2 {
+        height: 125px;
+        background-color: firebrick;
+        padding: 0px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .home-box2 .footer {
+        flex: 1 100%;
+        order: 4;
+        position:absolute;
+        bottom:0;
+        width:100%;
+        height:60px;
+        text-align: center;
+    }
+
+    .home-box2 .title {
+        flex: 2 100%;
+        text-align: center;
+        padding: 5px;
+        height: auto;
+    }
+
+    .home-box2 .forum {
+        flex: 2 100%;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .home-box3 {
+        height: 125px;
+        display: flex;
+        background-color: darkgreen;
+    }
+
     h1.homeHeading {
-    font-size: 35px;
-}
+        font-size: 35px;
+    }
     h2.homeHeading {
-    font-size: 20px;
-}
+        font-size: 20px;
+    }
 
 }
 @media (max-width: 480px) {
     .page-head{
+        background-repeat: no-repeat;
+        background-size:cover;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .home-box1 {
+        height: 200px;
+        padding: 0px;
+        display: flex;
+        background-color: #7acaff;
+    }
 
-    background-repeat: no-repeat;
-    background-size:cover;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
+    .home-box2 {
+        height: 100px;
+        background-color: firebrick;
+        padding: 0px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .home-box2 .footer {
+        flex: 1 100%;
+        order: 4;
+        position:absolute;
+        bottom:0;
+        width:100%;
+        height:60px;
+        text-align: center;
+    }
+
+    .home-box2 .title {
+        flex: 2 100%;
+        text-align: center;
+        padding: 5px;
+        height: auto;
+    }
+
+    .home-box2 .forum {
+        flex: 2 100%;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .home-box3 {
+        height: 100px;
+        display: flex;
+        background-color: darkgreen;
+    }
 
     h1.homeHeading {
-    font-size: 30px;
-}
+        font-size: 30px;
+    }
     h2.homeHeading {
-    font-size: 20px;
-}
+        font-size: 20px;
+    }
 }
 

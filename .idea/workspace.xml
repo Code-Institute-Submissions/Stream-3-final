@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21416696-5661-4180-89ff-e69ecd8b0599" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/Jamal_Image-for-website.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/Winkel_triple_projection_SW.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/social1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/social2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/social3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/social4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/social5.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/world2.png" afterPath="$PROJECT_DIR$/static/img/world2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/world3.png" afterPath="$PROJECT_DIR$/static/img/world3.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/views.py" afterPath="$PROJECT_DIR$/home/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base-home.html" afterPath="$PROJECT_DIR$/templates/base-home.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="119" column="17" lean-forward="false" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
+            <state relative-caret-position="210">
+              <caret line="472" column="5" lean-forward="false" selection-start-line="471" selection-start-column="8" selection-end-line="472" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -125,7 +114,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base-home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base-home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base-home.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="227">
@@ -201,9 +190,9 @@
         <option value="$PROJECT_DIR$/static/css/morphtext.css" />
         <option value="$PROJECT_DIR$/static/js/morphtext.js" />
         <option value="$PROJECT_DIR$/home/templates/index.html" />
-        <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/home/views.py" />
         <option value="$PROJECT_DIR$/templates/base-home.html" />
+        <option value="$PROJECT_DIR$/static/css/style.css" />
       </list>
     </option>
   </component>
@@ -214,8 +203,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="55" />
-    <option name="y" value="475" />
+    <option name="x" value="-173" />
+    <option name="y" value="185" />
     <option name="width" value="1932" />
     <option name="height" value="722" />
   </component>
@@ -947,7 +936,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="475" width="1932" height="722" extended-state="0" />
+    <frame x="-173" y="185" width="1932" height="722" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25320512" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1399,14 +1388,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="119" column="17" lean-forward="false" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1429,6 +1410,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="129" column="101" lean-forward="false" selection-start-line="129" selection-start-column="101" selection-end-line="129" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="472" column="5" lean-forward="false" selection-start-line="471" selection-start-column="8" selection-end-line="472" selection-end-column="5" />
           <folding />
         </state>
       </provider>
