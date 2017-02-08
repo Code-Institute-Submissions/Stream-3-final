@@ -191,9 +191,8 @@
         margin: 30px;
         text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
     }
-
-@media (min-width: 1200px) {
-    .page-head{
+    .page-head {
+        background: url('../img/world4.png');
         background-repeat: no-repeat;
         background-size:cover;
         display: flex;
@@ -201,6 +200,7 @@
         flex-direction: column;
     }
 
+@media (min-width: 1200px) {
     h1.homeHeading {
         font-size: 60px;
     }
@@ -259,13 +259,6 @@
 
 @media (min-width: 992px) and (max-width: 1199px) {
 
-    .page-head{
-        background-repeat: no-repeat;
-        background-size:cover;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
     .home-box1 {
         height: 400px;
         padding: 0px;
@@ -321,13 +314,7 @@
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-    .page-head{
-        background-repeat: no-repeat;
-        background-size:cover;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
+
     .home-box1 {
         height: auto;
         padding: 0px;
@@ -384,13 +371,7 @@
 }
 
 @media (max-width: 767px) {
-    .page-head{
-        background-repeat: no-repeat;
-        background-size:cover;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
+
     .home-box1 {
         height: auto;
         padding: 0px;
@@ -448,13 +429,7 @@
 
 }
 @media (max-width: 480px) {
-    .page-head{
-        background-repeat: no-repeat;
-        background-size:cover;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
+
     .home-box1 {
         height: auto;
         padding: 0px;
