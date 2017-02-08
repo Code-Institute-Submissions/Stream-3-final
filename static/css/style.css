@@ -422,14 +422,12 @@
         flex-direction: column;
     }
     .home-box1 {
-        height: 200px;
         padding: 0px;
         display: flex;
         background-color: #7acaff;
     }
 
     .home-box2 {
-        height: 100px;
         background-color: firebrick;
         padding: 0px;
         display: flex;
@@ -460,7 +458,6 @@
     }
 
     .home-box3 {
-        height: 100px;
         display: flex;
         background-color: darkgreen;
     }
