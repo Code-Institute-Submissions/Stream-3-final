@@ -89,6 +89,7 @@ header .header-content .header-content-inner p {
 .home-box1 {
 
     height: 600px;
+    padding: 0px;
     display: flex;
     background-color: #7acaff;
 }
@@ -97,9 +98,8 @@ header .header-content .header-content-inner p {
 
     height: 300px;
     background-color: firebrick;
+    padding: 0px;
     display: flex;
-    padding: 5px;
-    flex-wrap: nowrap;
     flex-flow: row wrap;
 }
 
@@ -113,9 +113,17 @@ header .header-content .header-content-inner p {
     text-align: center;
 }
 
-.home-box2 .main {
+.home-box2 .title {
     flex: 2 100%;
     text-align: center;
+    padding: 5px;
+    height: auto;
+}
+
+.home-box2 .forum {
+    flex: 2 100%;
+    text-align: left;
+    padding: 10px;
 }
 
 .Aligner-item {

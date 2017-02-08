@@ -75,7 +75,6 @@
         </div>
     {% endif %}
     <header>
-        <div class="row">
             <div class="col-md-8 home-box1">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                       <!-- Indicators -->
@@ -117,19 +116,23 @@
                     </div> <!-- Carousel -->
             </div>
             <div class="col-md-4 home-box2" >
-                <article class="main">
-                    <h2 class="homeHeading">We Are Social</h2>
+                <article class="title">
+                    <h1 class="homeHeading">We Are Social</h1>
                     <p>Allows Social Entrepreneurs and Developers to Exchange Ideas</p>
+                </article>
+                <article class="forum">
+                    <h2 class="homeHeading">Most recent Blog</h2>
                     {% block content_header %}
                     {% endblock %}
                 </article>
-                <footer class="footer"><a class="btn btn-primary outline" href="/forum/">View the Forum</a></footer>
+
+
+                <footer class="footer"><a class="btn btn-primary outline" href="/blog/">View the Blog</a></footer>
 
             </div>
             <div class="col-md-4 home-box3" >
 
             </div>
-        </div>
     </header>
 
 

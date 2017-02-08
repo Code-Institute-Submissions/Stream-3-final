@@ -4,5 +4,6 @@ from django.utils import timezone
 
 def get_index(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[0]
+    print "posts:",posts
     args = {'posts': posts}
     return render(request, 'index.html', args)
