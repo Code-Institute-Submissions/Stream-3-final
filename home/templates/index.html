@@ -2,7 +2,7 @@
 
 {% block content_home_blog %}
     <h3 class="homeHeading">{{ posts.title }}</h3>
-    <p class="homeHeading">{{ posts.content |truncatewords:30 }}</p>
+    <p class="homeHeading">{{ posts.content |truncatewords:80 }}</p>
 {% endblock %}
 
 {% block content_home_forum %}
