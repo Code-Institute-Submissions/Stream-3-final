@@ -121,8 +121,8 @@
                     <p>Allows Social Entrepreneurs and Developers to Exchange Ideas</p>
                 </article>
                 <article class="forum">
-                    <h2 class="homeHeading">Most recent Blog</h2>
-                    {% block content_header %}
+                    <h2 class="homeHeading">Most Recent Blog</h2>
+                    {% block content_home_blog %}
                     {% endblock %}
                 </article>
 
@@ -131,7 +131,11 @@
 
             </div>
             <div class="col-md-4 home-box3" >
-
+                <article class="forum">
+                    <h2 class="homeHeading">Forum latest</h2>
+                    {% block content_home_forum %}
+                    {% endblock %}
+                </article>
             </div>
     </header>
 

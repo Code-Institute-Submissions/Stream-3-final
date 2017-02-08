@@ -1,10 +1,21 @@
 {% extends 'base-home.html' %}
 
-{% block content_header %}
-<h3>{{ posts.title }}</h3>
-<p>{{ posts.content |truncatewords:30 }}</p>
+{% block content_home_blog %}
+    <h3 class="homeHeading">{{ posts.title }}</h3>
+    <p class="homeHeading">{{ posts.content |truncatewords:30 }}</p>
 {% endblock %}
 
+{% block content_home_forum %}
+    {% for forum_subject in forum_subjects %}
+        {% autoescape off %}
+        <h3 class="homeHeading">{{ forum_subject.name }}</h3>
+        <div class="homeHeading">
+            <a class="homeHeading" href="{% url 'threads' forum_subject.id %}" {{ forum_subject.id }}>{{ forum_subject.description | truncatewords:20}}</a>
+        </div>
+        {% endautoescape %}
+    {% endfor %}
+
+{% endblock %}
 
 {% block content %}
     <section class="bg-primary" id="about">

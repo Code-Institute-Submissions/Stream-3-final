@@ -36,18 +36,36 @@
     .homeHeading {
         font-family: Roboto, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
         color: #fff;
-        font-weight: 700;
-        text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 0;
-        text-shadow: 2px 2px 4px #000000;
+
     }
 
     h1.homeHeading {
         font-size: 80px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px #000000;
     }
     h2.homeHeading {
         font-size: 50px;
+        font-weight: 600;
+        text-shadow: 2px 2px 2px #000000;
+    }
+
+    h3.homeHeading {
+        font-size: 30px;
+        font-weight: 500;
+        text-shadow: 1px 1px 1px #000000;
+    }
+
+    a.homeHeading {
+        color: #fff;
+        font-weight: 400;
+    }
+
+    div.homeHeading {
+        padding-left: 10px;
     }
 
     .btn-primary.outline {
@@ -190,6 +208,10 @@
         font-size: 40px;
     }
 
+    h3.homeHeading {
+        font-size: 25px;
+    }
+
     .home-box1 {
         height: 600px;
         padding: 0px;
@@ -288,10 +310,14 @@
         background-color: darkgreen;
     }
     h1.homeHeading {
-        font-size: 50px;
+        font-size: 40px;
     }
     h2.homeHeading {
-        font-size: 30px;
+        font-size: 20px;
+    }
+
+    h3.homeHeading {
+        font-size: 15px;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -303,14 +329,14 @@
         flex-direction: column;
     }
     .home-box1 {
-        height: 300px;
+        height: auto;
         padding: 0px;
         display: flex;
         background-color: #7acaff;
     }
 
     .home-box2 {
-        height: 150px;
+        height: auto;
         background-color: firebrick;
         padding: 0px;
         display: flex;
@@ -341,15 +367,19 @@
     }
 
     .home-box3 {
-        height: 150px;
+        height: auto;
         display: flex;
         background-color: darkgreen;
     }
     h1.homeHeading {
-        font-size: 40px;
+        font-size: 30px;
     }
     h2.homeHeading {
-        font-size: 25px;
+        font-size: 20px;
+    }
+
+    h3.homeHeading {
+        font-size: 14px;
     }
 }
 
@@ -362,14 +392,14 @@
         flex-direction: column;
     }
     .home-box1 {
-        height: 250px;
+        height: auto;
         padding: 0px;
         display: flex;
         background-color: #7acaff;
     }
 
     .home-box2 {
-        height: 125px;
+        height: auto;
         background-color: firebrick;
         padding: 0px;
         display: flex;
@@ -400,16 +430,20 @@
     }
 
     .home-box3 {
-        height: 125px;
+        height: auto;
         display: flex;
         background-color: darkgreen;
     }
 
     h1.homeHeading {
-        font-size: 35px;
+        font-size: 25px;
     }
     h2.homeHeading {
-        font-size: 20px;
+        font-size: 15px;
+    }
+
+    h3.homeHeading {
+        font-size: 10px;
     }
 
 }
@@ -422,12 +456,14 @@
         flex-direction: column;
     }
     .home-box1 {
+        height: auto;
         padding: 0px;
         display: flex;
         background-color: #7acaff;
     }
 
     .home-box2 {
+        height: auto;
         background-color: firebrick;
         padding: 0px;
         display: flex;
@@ -458,15 +494,16 @@
     }
 
     .home-box3 {
+        height: auto;
         display: flex;
         background-color: darkgreen;
     }
 
     h1.homeHeading {
-        font-size: 30px;
+        font-size: 20px;
     }
     h2.homeHeading {
-        font-size: 20px;
+        font-size: 10px;
     }
 }
 
