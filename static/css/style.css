@@ -139,6 +139,12 @@
         background-color: darkgreen;
     }
 
+    .home-box4 {
+        height: 300px;
+        display: flex;
+        background-color: darkgreen;
+    }
+
     .btn.outline {
         background: none;
         padding: 12px 22px;

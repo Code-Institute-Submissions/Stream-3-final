@@ -75,72 +75,70 @@
         </div>
     {% endif %}
     <header>
-            <div class="col-md-8 home-box1">
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                      <!-- Indicators -->
-                      <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                      </ol>
+        <div class="col-md-8 home-box1">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  </ol>
 
-                      <!-- Wrapper for slides -->
-                      <div class="carousel-inner">
-                        <div class="item active">
-                          <img src="/static/img/world1.png" class="img-full" alt="We Are Social">
-                          <div class="carousel-caption">
-                            <h2 class="homeHeading">We Are Social</h2>
-                          </div>
-                        </div>
-                        <div class="item">
-                          <img src="/static/img/world2.png" class="img-full" alt="We Are Social">
-                          <div class="carousel-caption">
-                            <h2 class="homeHeading">A Social Enterprise</h2>
-                          </div>
-                        </div>
-                        <div class="item">
-                          <img src="/static/img/world3.png" class="img-full" alt="We Are Social">
-                          <div class="carousel-caption">
-                            <h2 class="homeHeading">Connecting People</h2>
-                          </div>
-                        </div>
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img src="/static/img/world1.png" class="img-full" alt="We Are Social">
+                      <div class="carousel-caption">
+                        <h2 class="homeHeading">We Are Social</h2>
                       </div>
+                    </div>
+                    <div class="item">
+                      <img src="/static/img/world2.png" class="img-full" alt="We Are Social">
+                      <div class="carousel-caption">
+                        <h2 class="homeHeading">A Social Enterprise</h2>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="/static/img/world3.png" class="img-full" alt="We Are Social">
+                      <div class="carousel-caption">
+                        <h2 class="homeHeading">Connecting People</h2>
+                      </div>
+                    </div>
+                  </div>
 
-                      <!-- Controls -->
-                      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
-                    </div> <!-- Carousel -->
-            </div>
-            <div class="col-md-4 home-box2" >
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </div> <!-- Carousel -->
+        </div>
+        <div class="col-md-4 home-box2" >
 
-                <article class="forum">
-                    <h2 class="homeHeading">Most Recent Blog</h2>
-                    {% block content_home_blog %}
-                    {% endblock %}
-                </article>
+            <article class="forum">
+                <h2 class="homeHeading">Most Recent Blog</h2>
+                {% block content_home_blog %}
+                {% endblock %}
+            </article>
 
 
-                <footer class="footer"><a class="btn btn-primary outline" href="/blog/">View the Blog</a></footer>
+            <footer class="footer"><a class="btn btn-primary outline" href="/blog/">View the Blog</a></footer>
 
-            </div>
-            <div class="col-md-4 home-box3" >
-                <article class="forum">
-                    <h2 class="homeHeading">Forum latest</h2>
-                    {% block content_home_forum %}
-                    {% endblock %}
-                </article>
-            </div>
+        </div>
+        <div class="col-md-4 home-box3" >
+            <article class="forum">
+                <h2 class="homeHeading">Forum latest</h2>
+                {% block content_home_forum %}
+                {% endblock %}
+            </article>
+        </div>
     </header>
-
-
-        <main role="main">
-            {% block content %}
-            {% endblock %}
-        </main>
+    <main role="main">
+        {% block content %}
+        {% endblock %}
+    </main>
     <footer>
 
     </footer>
