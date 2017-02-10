@@ -15,6 +15,10 @@ class AccountUserManager(UserManager):
         user.save(using=self._db)
 
         return user
+
+    def __unicode__(self):
+        return self.email
+
 class User(AbstractUser):
     stripe_id = models.CharField(max_length=40, default='')
     subscription_end = models.DateTimeField(default=timezone.now)
@@ -30,3 +34,4 @@ class User(AbstractUser):
             return False
 
         return True
+

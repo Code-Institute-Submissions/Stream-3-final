@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'disqus',
     'django_forms_bootstrap',
+    'rest_framework',
+    'rest_framework_docs',
     'accounts',
     'flat_pages',
     'paypal.standard.ipn',
@@ -38,6 +40,8 @@ INSTALLED_APPS = [
     'emoticons',
     'threads',
     'polls',
+    'locations',
+
 
 ]
 

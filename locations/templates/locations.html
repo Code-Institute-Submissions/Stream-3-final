@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block head_js %}
+    {% autoescape off %}
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+        $(".locationButton").click(function() {
+            //alert($(this).attr("href"));
+            var buttonText = $(this).text();
+            var mapCentre = $(this).attr('title');
+            var imageURL = $("#mapImage").attr('src');
+            //console.log(buttonText);
+            //console.log(imageURL);
+            //console.log(mapCentre);
+            var mapURL = "https://maps.googleapis.com/maps/api/staticmap?center=" + mapCentre + "&zoom=14&size=850x600&maptype=terrain&key=&sensor=false";
+            $("#mapImage").attr('src', mapURL);
+            //var myArray = [{{ map_details }}]
+            //console.log(myArray);
+            //switch imageURL:
+
+        });
+    });
+    </script>
+    {% endautoescape %}
+
+{% endblock %}
+
+{% block content_header %}
+        <h1 class="homeHeading">We Are Social</h1>
+        <h2 class="homeHeading">Our Locations</h2>
+
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="col-md-6">
+            <h2>We Are Social Locations</h2>
+            {% for map_item in map_details %}
+                <p><a class="btn btn-primary locationButton" id="location2" title="{{ map_item.center1 }},{{ map_item.center2 }}">{{ map_item.name }}</a></p>
+            {% endfor %}
+        </div>
+        <div class="col-md-6">
+            <img class="img-thumbnail img-responsive" id="mapImage" src="https://maps.googleapis.com/maps/api/staticmap?center=51.4989098,0.0063561&zoom=14&size=850x600&maptype=terrain&key=&sensor=false" />
+        </div>
+    </div>
+{% endblock %}

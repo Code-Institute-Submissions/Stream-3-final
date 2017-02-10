@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'', include('magazines.urls')),
     url(r'', include('threads.urls')),
     url(r'', include('polls.urls')),
+    url(r'', include('locations.urls')),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     url(r'^pages/', include('django.contrib.flatpages.urls')),
 ]
