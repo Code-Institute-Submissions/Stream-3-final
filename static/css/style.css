@@ -1,7 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+/*@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
     body {
         padding-top: 50px;
-        font-family: Roboto, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+        font-family: Ubuntu, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     }
     .navbar-default {
         border: none;
@@ -29,12 +30,12 @@
     }
 
     h1, h2, h3, h4 {
-        font-family: Roboto, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+        font-family: Ubuntu, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
         color: #000;
     }
 
     .homeHeading {
-        font-family: Roboto, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+        font-family: Ubuntu, 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
         color: #fff;
         margin-top: 0;
         margin-bottom: 0;
@@ -142,6 +143,18 @@
     }
 
     .home-box4 .footer {
+        flex: 1 100%;
+        text-align: center;
+    }
+
+    .home-box5 {
+        height: 300px;
+        display: flex;
+        flex-flow: row wrap;
+        background-color: #dbdbdb;
+    }
+
+    .home-box5 .footer {
         flex: 1 100%;
         text-align: center;
     }
