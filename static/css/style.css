@@ -111,11 +111,6 @@
 
     .home-box2 .footer {
         flex: 1 100%;
-        order: 4;
-        position:absolute;
-        bottom:0;
-        width:100%;
-        height:60px;
         text-align: center;
     }
 
@@ -142,7 +137,13 @@
     .home-box4 {
         height: 300px;
         display: flex;
+        flex-flow: row wrap;
         background-color: darkgreen;
+    }
+
+    .home-box4 .footer {
+        flex: 1 100%;
+        text-align: center;
     }
 
     .btn.outline {
