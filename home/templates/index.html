@@ -2,7 +2,7 @@
 
 {% block content_home_blog %}
     <h3 class="homeHeading">{{ posts.title }}</h3>
-    <p class="homeHeading">{{ posts.content |truncatewords:80 }}</p>
+    <p class="homeHeading">{{ posts.content |truncatewords:40 }}</p>
 {% endblock %}
 
 {% block content_home_forum %}
@@ -34,19 +34,14 @@
             <footer class="footer"><a class="btn btn-primary outline" href="/locations/">Find US!</a></footer>
         </div>
     </div>
-
     <section class="bg-primary" id="about">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">We Are Social</h2>
-
-
-                    <p class="text-faded">Information about we are social</p>
-                    <a class="btn btn-outline-danger" href="/pages/about/" id="infoButton" type="button" autofocus>Find Out More...</a>
-                    <br>
-                    <button type="button" class="btn btn-outline-danger">Danger</button>
-                </div>
+            <div class="col-lg-12 text-center">
+                <h2 class="homeHeading">About We Are Social</h2>
+                <p class="text-faded">We Are Social is a web developer community social enterprise that allows community organisations and web developers to talk about ideas, and develop innovative new web applications which benefit society.</p>
+                <p class="text-faded">Anyone can join, as long as you are either a web developer looking to use your expertise to benefits socity, or you are from a community group or organisation.  We also welcome anyone who wants to get invloved and make a difference for their community or society at leage.</p>
+                <a class="btn btn-primary outline" href="/pages/about/" id="infoButton" type="button" autofocus>Find Out More...</a>
+                <br>
             </div>
         </div>
     </section>

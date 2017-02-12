@@ -1,4 +1,3 @@
-/*@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);*/
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
     body {
         padding-top: 50px;
@@ -157,6 +156,11 @@
     .home-box5 .footer {
         flex: 1 100%;
         text-align: center;
+    }
+
+    .bg-primary {
+        background-color: #b22222;
+        padding-top: 50px;
     }
 
     .btn.outline {
