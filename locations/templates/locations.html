@@ -9,7 +9,7 @@
             var buttonText = $(this).text();
             var mapCentre = $(this).attr('title');
             var imageURL = $("#mapImage").attr('src');
-            var mapURL = "http://maps.googleapis.com/maps/api/staticmap?center=" + mapCentre + "&zoom=14&maptype=terrain&size=400x400";
+            var mapURL = "http://maps.googleapis.com/maps/api/staticmap?center=" + mapCentre + "&zoom=14&maptype=terrain&size=400x400&key=AIzaSyD3TRbJCFVNWG1zSSyUZuWapsoBaCuLa1w";
             $("#mapImage").attr('src', mapURL);
         });
         $(".zoomButton").click(function() {
@@ -24,7 +24,7 @@
             else if (buttonText == "zoomOut"){
                 zoomNum -= 1;
             }
-            var mapURL = "http://maps.googleapis.com/maps/api/staticmap?center=" + mapCentre + "&zoom=" + zoomNum + "&maptype=terrain&size=400x400";
+            var mapURL = "http://maps.googleapis.com/maps/api/staticmap?center=" + mapCentre + "&zoom=" + zoomNum + "&maptype=terrain&size=400x400&key=AIzaSyD3TRbJCFVNWG1zSSyUZuWapsoBaCuLa1w";
             $("#mapImage").attr('src', mapURL);
         });
     });
@@ -56,14 +56,14 @@
                         <td>{{ map_item.name }}</td>
                         <td><a class="btn btn-primary locationButton" id="location2" title="{{ map_item.center1 }},{{ map_item.center2 }}">View Map</a></td>
                         <td><a class="zoomButton" title="{{ map_item.center1 }},{{ map_item.center2 }}" id="zoomIn"><i class="fa fa-search-plus fa-2x" aria-hidden="true"></i></a>
-                            <a class="zoomButton" title="{{ map_item.center1 }},{{ map_item.center2 }}" id="zoomOut"><i class="fa fa-search-minus fa-2x" aria-hidden="true"></i></a></p></td>
+                            <a class="zoomButton" title="{{ map_item.center1 }},{{ map_item.center2 }}" id="zoomOut"><i class="fa fa-search-minus fa-2x" aria-hidden="true"></i></a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
             </table>
         </div>
         <div class="col-md-6">
-            <img class="img-thumbnail img-responsive" id="mapImage" src="http://maps.googleapis.com/maps/api/staticmap?center=51.4989098,0.0063561&zoom=12&maptype=terrain&size=400x400" />
+            <img class="img-thumbnail img-responsive" id="mapImage" src="http://maps.googleapis.com/maps/api/staticmap?center=51.4989098,0.0063561&zoom=12&maptype=terrain&size=400x400&key=AIzaSyD3TRbJCFVNWG1zSSyUZuWapsoBaCuLa1w" />
         </div>
     </div>
 {% endblock %}
