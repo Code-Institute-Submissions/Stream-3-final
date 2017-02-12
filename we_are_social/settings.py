@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'threads',
     'polls',
     'locations',
+    'contactform',
 
 
 ]

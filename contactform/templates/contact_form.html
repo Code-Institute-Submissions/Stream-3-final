@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap_tags %}
+
+{% block content %}
+    <div class="container">
+        <h2>Contact We Are Social</h2>
+            <p>If you have any questions or special requests, please use the form below to send us an enquiry.  We aim to reply to all enquiries within 24 hours.</p>
+            <form name="contactForm" method="post" action="{% url 'contact' %}">
+            {% csrf_token %}
+            {{ form | as_bootstrap }}
+            <button type="submit" class="btn btn-primary">Send Enquiry</button>
+            </form>
+    </div>
+
+{% endblock %}
