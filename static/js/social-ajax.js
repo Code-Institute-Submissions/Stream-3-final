@@ -65,11 +65,10 @@ function login() {
             type: "POST",
             data: {email : username, password: password},
 
-            success : function() {
+            success : function(data) {
+                console.log(data);
                 $('#login_button').val("Logged In");
                 $("#login_button").attr("disabled", true);
-                //$("#gotocheckout").css("display: inline;");
-                //$('#gotocheckout').show();
             },
 
             error : function() {//(xhr,errmsg,err) {

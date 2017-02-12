@@ -35,15 +35,12 @@ INSTALLED_APPS = [
     'paypal_store',
     'products',
     'magazines',
-    #'debug_toolbar',
     'tinymce',
     'emoticons',
     'threads',
     'polls',
     'locations',
     'contactform',
-
-
 ]
 
 MIDDLEWARE = [
