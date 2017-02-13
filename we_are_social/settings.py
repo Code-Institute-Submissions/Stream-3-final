@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'polls',
     'locations',
     'contactform',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -57,6 +58,10 @@ MIDDLEWARE = [
 INTERNAL_IPS = ('127.0.0.1',)
 
 ROOT_URLCONF = 'we_are_social.urls'
+
+SOUTH_MIGRATION_MODULES = {
+    'captcha': 'captcha.south_migrations',
+}
 
 TEMPLATES = [
     {

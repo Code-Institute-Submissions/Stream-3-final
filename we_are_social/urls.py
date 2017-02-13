@@ -17,4 +17,5 @@ urlpatterns = [
     url(r'', include('contactform.urls')),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     url(r'^pages/', include('django.contrib.flatpages.urls')),
+    url(r'^captcha/', include('captcha.urls')),
 ]
