@@ -48,7 +48,6 @@
                     <li><a href="/forum/">Forum</a></li>
                     <li><a href="/locations/">Locations</a></li>
                     {% if user.is_authenticated %}
-                    <li><a href="/magazines/">Magazines</a></li>
                     <li><a href="{% url 'profile' %}">Profile</a></li>
                     <li><a href="{% url 'logout' %}">Log Out</a></li>
                     {% else %}
@@ -126,7 +125,6 @@
         </div>
         <div class="col-md-4 home-box3" >
             <article class="forum">
-                <h2 class="homeHeading">Forum latest</h2>
                 {% block content_home_forum %}
                 {% endblock %}
             </article>

@@ -40,7 +40,7 @@ def register(request):
             if form.is_valid():
                 try:
                     #customer = stripe.Charge.create(amount=499, currency='GBP', description=form.cleaned_data['email'], card=form.cleaned_data['stripe_id'],)
-                    customer = stripe.Customer.create(email=form.cleaned_data['email'], card=form.cleaned_data['stripe_id'], plan='REG_MONTHLY',)
+                    customer = stripe.Customer.create(email=form.cleaned_data['email'], card=form.cleaned_data['stripe_id'], plan='we_are_social_monthly',)
                     print "customer:",customer
                 except stripe.error.CardError, e:
                     messages.error(request, 'Your card was declined!')
@@ -49,7 +49,7 @@ def register(request):
                     user = form.save()
                     #user = auth.authenticate(email=request.POST.get('email'), password=request.POST.get('password1'))
                     user.stripe_id = customer.id#customer.stripe_id
-                    user.subscription_end = arrow.now().replace(weeks=+4).datetime
+                    user.subscription_end = arrow.now().replace(days=+31).datetime
                     user.save()
                     if user:
                         user = auth.authenticate(email=subemail, password='password', allownopassword=True)

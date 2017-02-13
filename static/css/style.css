@@ -169,6 +169,13 @@
         font-weight: bold;
     }
 
+    .forum_each {
+        margin-top: 10px;
+        padding: 15px;
+        display: flex;
+        height: auto;
+    }
+
     .btn-primary.outline {
         background: none;
         border: 2px solid #0099cc;
@@ -235,6 +242,10 @@
 
     h3.homeHeading {
         font-size: 25px;
+    }
+
+    h4.homeHeading {
+        font-size: 20px;
     }
 
     .home-box1 {
@@ -337,6 +348,10 @@
     h3.homeHeading {
         font-size: 15px;
     }
+    h4.homeHeading {
+        font-size: 12px;
+    }
+
 }
 @media (min-width: 768px) and (max-width: 991px) {
 
@@ -392,6 +407,10 @@
 
     h3.homeHeading {
         font-size: 14px;
+    }
+
+    h4.homeHeading {
+        font-size: 11px;
     }
 }
 
@@ -449,6 +468,10 @@
     }
 
     h3.homeHeading {
+        font-size: 10px;
+    }
+
+    h4.homeHeading {
         font-size: 10px;
     }
 
@@ -524,5 +547,13 @@
     h2.homeHeading {
         font-size: 10px;
     }
+
+    h3.homeHeading {
+        font-size: 8px;
+    }
+    h4.homeHeading {
+        font-size: 6px;
+    }
+
 }
 

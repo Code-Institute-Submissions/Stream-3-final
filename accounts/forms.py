@@ -14,8 +14,8 @@ class UserRegistrationForm(UserCreationForm):
     expiry_month = forms.ChoiceField(label='Month', choices=MONTH_CHOICES)
     expiry_year = forms.ChoiceField(label='Year', choices=YEAR_CHOICES)
     stripe_id = forms.CharField(widget=forms.HiddenInput)
-    password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Password Confirmation', widget=forms.PasswordInput)
+    password1 = forms.CharField(label='Password', widget=forms.PasswordInput())
+    password2 = forms.CharField(label='Password Confirmation', widget=forms.PasswordInput())
 
     class Meta:
         model = User

@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'paypal.standard.ipn',
     'paypal_store',
     'products',
-    'magazines',
     'tinymce',
     'emoticons',
     'threads',

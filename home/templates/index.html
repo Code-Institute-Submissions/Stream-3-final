@@ -6,15 +6,18 @@
 {% endblock %}
 
 {% block content_home_forum %}
+    <section>
+        <article><h3 class="homeHeading">Forum Latest: There are: {{ forum_subjects.count }} Live Forums</h3></article>
+
     {% for forum_subject in forum_subjects %}
         {% autoescape off %}
-        <h3 class="homeHeading">{{ forum_subject.name }}</h3>
-        <div class="homeHeading">
-            <a class="homeHeading" href="{% url 'threads' forum_subject.id %}" {{ forum_subject.id }}>{{ forum_subject.description | truncatewords:20}}</a>
-        </div>
+            <div class="forum_each">
+                <div class="col-md-8"><h4 class="homeHeading">{{ forum_subject.name }}</h4></div>
+                <div class="col-md-4"><a class="btn btn-primary outline" href="{% url 'threads' forum_subject.id %}">Go To Forum</a></div>
+            </div>
         {% endautoescape %}
     {% endfor %}
-
+    </section>
 {% endblock %}
 
 {% block content %}
