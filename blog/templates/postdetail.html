@@ -17,7 +17,9 @@
                         <p>{{ post.content|linebreaks}}</p>
                         <p>
                             <button class="btn btn-default" onclick="location.href='/blog'">Back to Posts</button>
+                            {% if user.is_superuser %}
                             <button class="btn btn-warning" onclick="location.href='edit'">Edit Post</button>
+                            {% endif %}
                         </p>
                         <p>{{ post.published_date }} | <strong>Views:</strong> {{ post.views }} | <strong>Tags:</strong> {{ post.tag }}</p>
                             {% load disqus_tags %}

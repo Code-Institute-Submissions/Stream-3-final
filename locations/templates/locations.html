@@ -9,7 +9,7 @@
             var buttonText = $(this).text();
             var mapCentre = $(this).attr('title');
             var imageURL = $("#mapImage").attr('src');
-            var mapURL = "http://maps.googleapis.com/maps/api/staticmap?center=" + mapCentre + "&zoom=14&maptype=terrain&size=400x400&key=AIzaSyD3TRbJCFVNWG1zSSyUZuWapsoBaCuLa1w";
+            var mapURL = "http://maps.googleapis.com/maps/api/staticmap?center=" + mapCentre + "&zoom=14&maptype=terrain&size=400x400&key=AIzaSyBU_PttTHHVTJvyAzro3qNihkeh9oxkFmY";
             $("#mapImage").attr('src', mapURL);
         });
         $(".zoomButton").click(function() {
@@ -24,7 +24,7 @@
             else if (buttonText == "zoomOut"){
                 zoomNum -= 1;
             }
-            var mapURL = "http://maps.googleapis.com/maps/api/staticmap?center=" + mapCentre + "&zoom=" + zoomNum + "&maptype=terrain&size=400x400&key=AIzaSyD3TRbJCFVNWG1zSSyUZuWapsoBaCuLa1w";
+            var mapURL = "http://maps.googleapis.com/maps/api/staticmap?center=" + mapCentre + "&zoom=" + zoomNum + "&maptype=terrain&size=400x400&key=AIzaSyBU_PttTHHVTJvyAzro3qNihkeh9oxkFmY";
             $("#mapImage").attr('src', mapURL);
         });
     });
@@ -63,7 +63,7 @@
             </table>
         </div>
         <div class="col-md-6">
-            <img class="img-thumbnail img-responsive" id="mapImage" src="http://maps.googleapis.com/maps/api/staticmap?center=51.4989098,0.0063561&zoom=12&maptype=terrain&size=400x400&key=AIzaSyD3TRbJCFVNWG1zSSyUZuWapsoBaCuLa1w" />
+            <img class="img-thumbnail img-responsive" id="mapImage" src="http://maps.googleapis.com/maps/api/staticmap?center=51.4989098,0.0063561&zoom=12&maptype=terrain&size=400x400&key=AIzaSyBU_PttTHHVTJvyAzro3qNihkeh9oxkFmY" />
         </div>
     </div>
 {% endblock %}
