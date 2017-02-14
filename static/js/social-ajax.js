@@ -69,6 +69,8 @@ function login() {
                 console.log(data);
                 $('#login_button').val("Logged In");
                 $("#login_button").attr("disabled", true);
+                $("#closeBtn").text("Continue");
+                $("#closeBtn").attr("href", "/profile/");
             },
 
             error : function() {//(xhr,errmsg,err) {

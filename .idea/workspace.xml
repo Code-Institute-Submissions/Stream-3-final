@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21416696-5661-4180-89ff-e69ecd8b0599" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contactform/serializer.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/register.html" afterPath="$PROJECT_DIR$/accounts/templates/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contactform/forms.py" afterPath="$PROJECT_DIR$/contactform/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contactform/templates/contact_form.html" afterPath="$PROJECT_DIR$/contactform/templates/contact_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contactform/views.py" afterPath="$PROJECT_DIR$/contactform/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/threads/templates/forum/forum.html" afterPath="$PROJECT_DIR$/threads/templates/forum/forum.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/threads/templates/forum/thread.html" afterPath="$PROJECT_DIR$/threads/templates/forum/thread.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/threads/templates/forum/threads.html" afterPath="$PROJECT_DIR$/threads/templates/forum/threads.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/threads/views.py" afterPath="$PROJECT_DIR$/threads/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/we_are_social/settings.py" afterPath="$PROJECT_DIR$/we_are_social/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/login.html" afterPath="$PROJECT_DIR$/accounts/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/social-ajax.js" afterPath="$PROJECT_DIR$/static/js/social-ajax.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -85,7 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact_form.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contact_form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contactform/templates/contact_form.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="35">
@@ -95,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/accounts/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="45" column="11" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="45" selection-end-column="11" />
+            <state relative-caret-position="188">
+              <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -109,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/static/js/social-ajax.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="163">
-              <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="70" selection-end-column="58" />
+              <caret line="72" column="57" lean-forward="true" selection-start-line="72" selection-start-column="57" selection-end-line="72" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -178,7 +167,6 @@
         <option value="$PROJECT_DIR$/threads/forms.py" />
         <option value="$PROJECT_DIR$/threads/templates/forum/thread_form.html" />
         <option value="$PROJECT_DIR$/threads/templates/forum/post_form.html" />
-        <option value="$PROJECT_DIR$/accounts/templates/login.html" />
         <option value="$PROJECT_DIR$/static/css/morphtext.css" />
         <option value="$PROJECT_DIR$/static/js/morphtext.js" />
         <option value="$PROJECT_DIR$/home/views.py" />
@@ -195,7 +183,6 @@
         <option value="$PROJECT_DIR$/templates/footer.html" />
         <option value="$PROJECT_DIR$/contactform/urls.py" />
         <option value="$PROJECT_DIR$/contactform/serializer.py" />
-        <option value="$PROJECT_DIR$/static/js/social-ajax.js" />
         <option value="$PROJECT_DIR$/blog/templates/postdetail.html" />
         <option value="$PROJECT_DIR$/locations/templates/locations.html" />
         <option value="$PROJECT_DIR$/accounts/forms.py" />
@@ -214,6 +201,8 @@
         <option value="$PROJECT_DIR$/contactform/forms.py" />
         <option value="$PROJECT_DIR$/contactform/views.py" />
         <option value="$PROJECT_DIR$/contactform/templates/contact_form.html" />
+        <option value="$PROJECT_DIR$/static/js/social-ajax.js" />
+        <option value="$PROJECT_DIR$/accounts/templates/login.html" />
       </list>
     </option>
   </component>
@@ -1483,22 +1472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="45" column="11" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="45" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/social-ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="70" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -1511,6 +1484,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35">
           <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/social-ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="72" column="57" lean-forward="true" selection-start-line="72" selection-start-column="57" selection-end-line="72" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
           <folding />
         </state>
       </provider>

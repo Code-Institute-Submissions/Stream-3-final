@@ -33,7 +33,7 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a class="btn btn-primary" data-dismiss="modal" id="closeBtn">Close</a>
           </div>
         </div>
       </div>
@@ -44,6 +44,10 @@
             //$('#loginModal').addclass('show');
             $('#loginModal').modal('show');
         });
+
+        $('#closeBtn').click(function(){
+            window.location.href='/profile/';
+        })
     </script>
     <script type="text/javascript" src="{% static 'js/social-ajax.js' %}"></script>
 {% endblock %}
