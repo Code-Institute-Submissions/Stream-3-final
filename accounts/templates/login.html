@@ -40,14 +40,15 @@
 </div>
     <script type="text/javascript">
         $( document ).ready(function() {
-            console.log( "ready!" );
-            //$('#loginModal').addclass('show');
             $('#loginModal').modal('show');
         });
 
         $('#closeBtn').click(function(){
-            window.location.href='/profile/';
-        })
+            var closeBtnText = $('#closeBtn').text();
+            if (closeBtnText == 'Continue') {
+                window.location.href='/profile/';
+            }
+        });
     </script>
     <script type="text/javascript" src="{% static 'js/social-ajax.js' %}"></script>
 {% endblock %}
