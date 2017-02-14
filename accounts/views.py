@@ -24,7 +24,6 @@ def register(request):
         form = UserRegistrationForm(request.POST)
         subemail = request.POST.get('email')
         userExists = User.objects.filter(email=subemail)
-        #print "userExists:",userExists
         if userExists:
             import hashlib
             hashemail = hashlib.sha256("jatest" + subemail)
@@ -174,7 +173,7 @@ def reset_user(request):
                 reset_message,
                 'sender smtp gmail' + '<catkin.order@gmail.com>',
                 [email1, 'arnold-j83@sky.com'],
-                headers={'Reply-To': 'nicky.atkin@gmail.com'}
+                headers={'Reply-To': 'catkin.order@gmail.com'}
             )
             email.content_subtype = 'html'
             email.send()
@@ -184,24 +183,29 @@ def reset_user(request):
                        "Thank you, an email has been sent to you containing details of how you can reset your account password and activate your account.")
 
     else:
-        email = request.GET["email"]
-        hashemail = request.GET["email2"]
-        import hashlib
-        hashemail1 = hashlib.sha256("jatest" + email)
-        hexemail1 = hashemail1.hexdigest()
-        if hashemail == hexemail1:
-            valid = True
-        else:
-            valid = False
+        #email = request.GET["email"]
+        email = request.user.email
 
-        if valid:
-            form = UserResetForm(initial={'username': email, 'hashemail': hexemail1})
-            messages.success(request, "Please Click the Send Reset Email Button Below")
-            emailsent = False
-        else:
-            form = UserResetForm()
-            messages.error(request, "An Error Has Occured, please go back and click the link again")
-            emailsent = True
+        #hashemail = request.GET["email2"]
+        #import hashlib
+        #hashemail1 = hashlib.sha256("jatest" + email)
+        #hexemail1 = hashemail1.hexdigest()
+        #if hashemail == hexemail1:
+            #valid = True
+        #else:
+            #valid = False
+
+        #if valid:
+        #    form = UserResetForm(initial={'username': email, 'hashemail': hexemail1})
+        #    messages.success(request, "Please Click the Send Reset Email Button Below")
+        #    emailsent = False
+        #else:
+        #    form = UserResetForm()
+        #    messages.error(request, "An Error Has Occured, please go back and click the link again")
+        #    emailsent = True
+        form = UserResetForm(initial={'username': email, 'hashemail': email})
+        emailsent = False
+
     args = {'form': form, 'emailsent': emailsent}
     args.update(csrf(request))
     return render(request, 'reset1.html', args)

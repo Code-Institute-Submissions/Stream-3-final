@@ -1,15 +1,21 @@
 {% extends 'base.html' %}
 {% load bootstrap_tags %}
-
+{% block content_header %}
+<h1 class="homeHeading">Change Password and Reset User Account</h1>
+<h2 class="homeHeading">Logged in as: {{ user.email }}</h2>
+{% endblock %}
 {% block content %}
 <div class="container">
+    <div class="alert alert-warning">
+        <h3>If you would like to change your password for your account, please click the Send Reset Email button below.  This will send an email to your registered email account.  The email will contain a link which will enable you to reset your account.</h3>
+    </div>
     <form role="form" method="post" id="catkin-name-form" action="{% url 'resetuser' %}">
         <p id="email_sent" class="hidden">{{ emailsent }}</p>
         <legend>Reset User Account</legend>
             {% csrf_token %}
             {{ form |as_bootstrap }}
             <div class="form-group">
-                <button type="submit" class="btn btn-primary" id="send_email_button">Send Reset Email Reset</button>
+                <button type="submit" class="btn btn-primary" id="send_email_button">Send Reset Email</button>
             </div>
 
             <script type="text/javascript">

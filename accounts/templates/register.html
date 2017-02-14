@@ -18,10 +18,13 @@
 
 {% block content %}
     <div class="container">
-        <article>
-            <section><h2>Register with We Are Social</h2></section>
-            <section><p>We Are Social is a community that relies on subscriptions.  The monthly subscription is just £2 per month.  You can cancel your subscription at any time.</p></section>
-        </article>
+        <div class="alert alert-success">
+            <article>
+                <section><h2>Register with We Are Social</h2></section>
+                <section><p>We Are Social is a community that relies on subscriptions.  The monthly subscription is just £2 per month.  You can cancel your subscription at any time.</p></section>
+                <section>Please register below with a valid email address.  Please also select a password, which is a minimum of 8 characters long and is a mixture of letter and numbers.  Please also insert you credit or debit card number, card security code and card expiry date to activate your account.</section>
+            </article>
+        </div>
         <form action="{% url 'register' %}" method="POST" id="register-form">
             <div id="credit-card-errors" style="display:none;">
                 <div class="alert-message block-message error" id="stripe-error-message"></div>

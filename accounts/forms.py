@@ -9,13 +9,14 @@ class UserRegistrationForm(UserCreationForm):
         'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
     MONTH_CHOICES = list(enumerate(MONTH_ABBREVIATIONS, 1))
     YEAR_CHOICES = [(i, i) for i in xrange(2017, 2040)]
-    credit_card_number = forms.CharField(label='Credit card Number')
-    cvv = forms.CharField(label='Security Code (CVV)')
-    expiry_month = forms.ChoiceField(label='Month', choices=MONTH_CHOICES)
-    expiry_year = forms.ChoiceField(label='Year', choices=YEAR_CHOICES)
+    email = forms.EmailField(label='Your Email Address (Must Be A Valid Email Address)', required='required')
+    credit_card_number = forms.CharField(label='Credit OR Debit Card Number', required='required')
+    cvv = forms.IntegerField(label='Card Security Code (A 3 Digit Code On The Back Of Your Card)', max_value=999, required='required')
+    expiry_month = forms.ChoiceField(label='Credit OR Debit Card Expiry Month', choices=MONTH_CHOICES, required='required' )
+    expiry_year = forms.ChoiceField(label='Credit OR Debit Card Expiry Month', choices=YEAR_CHOICES, required='required')
     stripe_id = forms.CharField(widget=forms.HiddenInput)
-    password1 = forms.CharField(label='Password', widget=forms.PasswordInput())
-    password2 = forms.CharField(label='Password Confirmation', widget=forms.PasswordInput())
+    password1 = forms.CharField(label='Please Select a Password (Minimum 8 Characters Long and a Mixture of Letters and Numbers)', widget=forms.PasswordInput(), required='required')
+    password2 = forms.CharField(label='Password Confirmation', widget=forms.PasswordInput(), required='required')
 
     class Meta:
         model = User
