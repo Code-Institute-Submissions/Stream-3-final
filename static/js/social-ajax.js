@@ -67,14 +67,22 @@ function login() {
 
             success : function(data) {
                 console.log(data);
-                $('#login_button').val("Logged In");
-                $("#login_button").attr("disabled", true);
-                $("#closeBtn").text("Continue");
-                $("#closeBtn").attr("href", "/profile/");
+                var response_data = data;
+                $('#login_message').html(response_data);
+                if (response_data == "You have successfully logged in") {
+                    $('#login_button').val("Logged In");
+                    $("#login_button").attr("disabled", true);
+                    $("#closeBtn").text("Continue");
+                    $("#closeBtn").attr("href", "/profile/");
+                } else {
+                     $('#login_button').val("Try To Log In Again");
+                     $("#login_button").attr("disabled", false);
+                }
+
             },
 
-            error : function() {//(xhr,errmsg,err) {
-
+            error : function(data) {//(xhr,errmsg,err) {
+                console.log("error: " + data);
             }
         });
 };

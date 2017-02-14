@@ -26,6 +26,11 @@
                     <legend>Login to We Are Social</legend>
                     {% csrf_token %}
                     {{ form | as_bootstrap }}
+
+                    <div class="form-group" id="login_message">
+                        {{ login_message }}
+                    </div>
+
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Log In" id="login_button">
                     </div>

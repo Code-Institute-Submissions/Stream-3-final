@@ -1,38 +1,31 @@
 {% extends 'base.html' %}
 {% load bootstrap_tags %}
 
-{% block head_js %}
-
-  <script type="text/javascript">
-
-  </script>
-{% endblock %}
-
 {% block content %}
-<div class="box">
-<form role="form" method="post" id="catkin-name-form" action="{% url 'resetuser' %}">
-    <p id="email_sent" class="hidden">{{ emailsent }}</p>
-    <legend>Reset User Account</legend>
-        {% csrf_token %}
-        {{ form |as_bootstrap }}
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary" id="send_email_button">Send Reset Email Reset</button>
-        </div>
+<div class="container">
+    <form role="form" method="post" id="catkin-name-form" action="{% url 'resetuser' %}">
+        <p id="email_sent" class="hidden">{{ emailsent }}</p>
+        <legend>Reset User Account</legend>
+            {% csrf_token %}
+            {{ form |as_bootstrap }}
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" id="send_email_button">Send Reset Email Reset</button>
+            </div>
 
-        <script type="text/javascript">
-                                $(function(){
-                                    var email_sent = $("#email_sent").text();
-                                    console.log(email_sent);
-                                    if(email_sent == "True"){
-                                        $("#send_email_button").attr("disabled", true);
-                                    }
+            <script type="text/javascript">
+                $(function(){
+                    var email_sent = $("#email_sent").text();
+                    console.log(email_sent);
+                    if(email_sent == "True"){
+                        $("#send_email_button").attr("disabled", true);
+                    }
 
-                                    else {
-                                        $("#send_email_button").attr("disabled", false);
-                                    }
+                    else {
+                        $("#send_email_button").attr("disabled", false);
+                    }
 
-                                });
-                        </script>
-</form>
+                });
+            </script>
+    </form>
 </div>
 {% endblock %}

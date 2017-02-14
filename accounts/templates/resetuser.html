@@ -17,16 +17,16 @@
 </script>
 {% endblock %}
 {% block content %}
-<div class="box">
-<p class="hidden" id="preset">{{ reset }}</p>
-<form role="form" method="post" id="catkin-reset-form" action="{% url 'reset' %}">
-    <legend>Reset User Account 1</legend>
-        {% csrf_token %}
-        {{ form |as_bootstrap }}
-        <div class="form-group">
+<div class="container">
+    <p class="hidden" id="preset">{{ reset }}</p>
+    <form role="form" method="post" id="catkin-reset-form" action="{% url 'reset' %}">
+        <legend>Reset User Account 1</legend>
+            {% csrf_token %}
+            {{ form |as_bootstrap }}
+            <div class="form-group">
 
-            <input type="submit" class="btn btn-primary" id="Reset_Account" name="reset_account" value="Reset Account">
-        </div>
-</form>
+                <input type="submit" class="btn btn-primary" id="Reset_Account" name="reset_account" value="Reset Account">
+            </div>
+    </form>
 </div>
 {% endblock %}

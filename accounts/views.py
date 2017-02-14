@@ -80,17 +80,22 @@ def cancel_subscription(request):
 
 @login_required(login_url='/login/')
 def profile(request):
+
     return render(request, 'profile.html')
 
 def login(request):
+    login_message = "Please Enter Your Username and Password Above and Press the Log in Button"
     if request.method == 'POST':
         form = UserLoginForm(request.POST)
+        login_message = ""
         if form.is_valid():
             user = auth.authenticate(email=request.POST.get('email'), password=request.POST.get('password'), allownopassword=False)
 
             if user is not None:
                 auth.login(request, user)
                 messages.error(request, "You have successfully logged in")
+                login_message = "You have successfully logged in"
+                return HttpResponse("You have successfully logged in")
                 #return redirect(reverse('profile'))
             else:
                 subemail=request.POST.get('email')
@@ -108,13 +113,17 @@ def login(request):
                     else:
                         resetlink = "http://johnarnold-stream3.herokuapp.com/resetuser?email=" + subemail + "&email2=" + hexemail
                         loginlink = "http://johnarnold-stream3.herokuapp.com/login/"
+
                     messages.error(request, mark_safe(
                         "Your email is recognised, but your password is incorrect.  Please try again.  If you have forgotten your password, <a href='" + resetlink + "' title='Click Here to Reset Your Password'>Reset You Password</a>."))
+
+                    return HttpResponse(mark_safe("Your email is recognised, but your password is incorrect.  Please try again.  If you have forgotten your password, <a href='" + resetlink + "' title='Click Here to Reset Your Password'>Reset You Password</a>."))
                 else:
                     messages.error(request, "User Not Recognised")
+                    return HttpResponse("User Not Recognised")
     else:
         form = UserLoginForm()
-    args = {'form': form}
+    args = {'form': form, 'login_message': login_message}
     return render(request, 'login.html', args)
 
 def logout(request):
