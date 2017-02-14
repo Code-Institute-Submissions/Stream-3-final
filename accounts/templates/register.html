@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content_header %}
+{% load django_bootstrap_breadcrumbs %}
 <h1 class="homeHeading">Register</h1>
 <h2 class="homeHeading">A Small Price to Pay</h2>
 {% endblock %}
@@ -14,6 +15,7 @@
     </script>
     <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
 {% endblock %}
+
 {% block content %}
     <div class="container">
         <article>

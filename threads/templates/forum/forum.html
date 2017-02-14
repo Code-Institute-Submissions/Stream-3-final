@@ -1,12 +1,21 @@
 {% extends 'base.html' %}
 {% load thread_extras %}
 {% load bootstrap_tags %}
+{% load django_bootstrap_breadcrumbs %}
 {% block content_header %}
 <h1 class="homeHeading">We Are Social - Forum</h1>
 <h2 class="homeHeading">This is where YOU get to talk about your ideas</h2>
 {% endblock %}
+    {% block breadcrumbs %}
+    {% clear_breadcrumbs %}
+    {{ block.super }}
+    {% breadcrumb 'Forum' '/' %}
+    {% endblock %}
+
 {% block content %}
+
     <div class="container">
+    {% render_breadcrumbs %}
     {% for subject in subjects %}
         <article>
             <section class="subject">

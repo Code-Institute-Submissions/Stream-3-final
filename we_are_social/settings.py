@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'locations',
     'contactform',
     'captcha',
+    'django_bootstrap_breadcrumbs',
 ]
 
 MIDDLEWARE = [

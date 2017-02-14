@@ -5,6 +5,7 @@ from .models import contact_data
 
 class contactForm(forms.ModelForm):
     captcha = CaptchaField()
+    email = forms.EmailField(min_length=5)
     class Meta:
         model = contact_data
         fields = ['name', 'email', 'phone', 'enquiry']

@@ -2,6 +2,7 @@
 {% load thread_extras %}
 {% load staticfiles %}
 {% load bootstrap_tags %}
+{% load django_bootstrap_breadcrumbs %}
 {% block content_header %}
 <h1 class="homeHeading">We Are Social - Forum</h1>
 <h2 class="homeHeading">{{ thread.name }}</h2>
@@ -9,9 +10,18 @@
     <p><a href="{% url 'new_post' thread.id %}" class="btn btn-primary">Add a Comment</a></p>
     {% endif %}
 {% endblock %}
+{% autoescape on %}
+{% block breadcrumbs %}
+{% clear_breadcrumbs %}
+{{ block.super }}
+{% breadcrumb 'Forum' '/forum/' %}
+{% breadcrumb thread.name '/' thread.id '/'%}
+{% endblock %}
+{% endautoescape %}
 {%  block content %}
     <div class="row header">
         <div class="container">
+        {% render_breadcrumbs %}
             <h2>{{ thread.name }}</h2>
             <div class="col-md-12">
                 <table class="table">

@@ -40,11 +40,11 @@ def new_thread(request, subject_id):
                 thread.subject = subject
                 thread.user = request.user
                 thread.save()
-
-                post = post_form.save(False)
-                post.user = request.user
-                post.thread = thread
-                post.save()
+                if request.POST.get('comment', None):
+                    post = post_form.save(False)
+                    post.user = request.user
+                    post.thread = thread
+                    post.save()
 
                 poll = poll_form.save(False)
                 poll.thread = thread
@@ -64,10 +64,11 @@ def new_thread(request, subject_id):
                 thread.user = request.user
                 thread.save()
 
-                post = post_form.save(False)
-                post.user = request.user
-                post.thread = thread
-                post.save()
+                if request.POST.get('comment', None):
+                    post = post_form.save(False)
+                    post.user = request.user
+                    post.thread = thread
+                    post.save()
 
                 messages.success(request, "Your new thread has been created")
 
