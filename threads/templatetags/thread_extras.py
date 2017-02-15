@@ -8,7 +8,15 @@ register = template.Library()
 def get_total_subject_posts(subject):
     total_posts = 0
     for thread in subject.threads.all():
+        print "thread:", thread
         total_posts += thread.posts.count()
+    return total_posts
+
+@register.filter
+def get_total_subject_threads(subject):
+    total_posts = 0
+    for thread in subject.threads.all():
+        total_posts += 1
     return total_posts
 
 @register.filter

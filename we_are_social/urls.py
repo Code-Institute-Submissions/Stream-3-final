@@ -9,8 +9,6 @@ urlpatterns = [
     url(r'', include('blog.urls')),
     url(r'', include('home.urls')),
     url(r'', include('accounts.urls')),
-    url(r'', include('paypal_store.urls')),
-    url(r'', include('products.urls')),
     url(r'', include('threads.urls')),
     url(r'', include('polls.urls')),
     url(r'', include('locations.urls')),

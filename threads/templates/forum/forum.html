@@ -23,10 +23,10 @@
                 <p><a href="{% url 'threads' subject.id%}">{% autoescape off %} {{ subject.description }} {% endautoescape %}</a> </p>
             </section>
             <div class="col-md-4">
-                <section>Number of Live Debates in this Forum: {{ subject.thread.count }}</section>
+                <section>Number of Live Debates in this Forum: <strong>{{ subject|get_total_subject_threads }}</strong></section>
             </div>
             <div class="col-md-4">
-                <section>Number of Posts: {{ subject|get_total_subject_posts }}</section>
+                <section>Number of Posts: <strong>{{ subject|get_total_subject_posts }}</strong></section>
             </div>
             <div class="col-md-4">
                 <section><a class="btn btn-info" href="{% url 'threads' subject.id%}">Enter Forum</a></section>

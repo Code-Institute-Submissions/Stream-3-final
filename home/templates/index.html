@@ -12,11 +12,11 @@
     {% for forum_subject in forum_subjects %}
         {% autoescape off %}
             <div class="forum_each">
-                <div class="col-md-8"><h4 class="homeHeading">{{ forum_subject.name }}</h4></div>
-                <div class="col-md-4"><a class="btn btn-primary outline" href="{% url 'threads' forum_subject.id %}">Go To Forum</a></div>
+                <div class="col-md-12"><a href="{% url 'threads' forum_subject.id %}"><h4 class="homeHeading">{{ forum_subject.name }}</h4></a></div>
             </div>
         {% endautoescape %}
     {% endfor %}
+    <footer><a class="btn btn-primary outline" href="{% url 'forum' %}">Go To Forums</a></footer>
     </section>
 {% endblock %}
 
