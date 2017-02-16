@@ -5,7 +5,7 @@ from django.core.exceptions import ValidationError
 from simplemathcaptcha.fields import MathCaptchaField
 
 class UserRegistrationForm(UserCreationForm):
-    captcha = MathCaptchaField(label='Please Answer This Math Problem to Prove Your Are Human')
+
     MONTH_ABBREVIATIONS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June',
         'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
     MONTH_CHOICES = list(enumerate(MONTH_ABBREVIATIONS, 1))
@@ -18,7 +18,7 @@ class UserRegistrationForm(UserCreationForm):
     stripe_id = forms.CharField(widget=forms.HiddenInput)
     password1 = forms.CharField(label='Please Select a Password (Minimum 8 Characters Long and a Mixture of Letters and Numbers)', widget=forms.PasswordInput(), required='required')
     password2 = forms.CharField(label='Password Confirmation', widget=forms.PasswordInput(), required='required')
-
+    captcha = MathCaptchaField(label='Please Answer This Math Problem to Prove Your Are Human')
     def clean_password1(self):
         password1 = self.cleaned_data.get('password1')
         if len(password1) < 8:
