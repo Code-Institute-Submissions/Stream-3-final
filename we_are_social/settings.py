@@ -152,6 +152,8 @@ PAYPAL_RECEIVER_EMAIL = 'arnold-j831@sky.com'
 
 TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 DEFAULT_FROM_EMAIL = 'johnarnold.wearesocial@gmail.com'
 SERVER_EMAIL = 'johnarnold.wearesocial@gmail.com'
 EMAIL_USE_TLS = True

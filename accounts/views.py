@@ -146,9 +146,10 @@ def subscriptions_webhook(request):
 
 def reset_user(request):
     domain = request.META.get('HTTP_HOST')
+    emailsent = False
     if request.method == "POST":
+        print "1"
         form = UserResetForm(request.POST)
-        emailsent = True
         email1 = request.POST["username"]
         hashemail = request.POST["hashemail"]
         import hashlib
@@ -160,10 +161,11 @@ def reset_user(request):
             valid = False
 
         if valid:
+            print "valid"
             if domain == "127.0.0.1:8000":
                 resetlink = "http://127.0.0.1:8000/reset?email=" + email1 + "&email2=" + hexemail1
             else:
-                resetlink = "http://catkin-art-1.herokuapp.com/reset?email=" + email1 + "&email2=" + hexemail1
+                resetlink = "http://johnarnold-stream3.herokuapp.com/reset?email=" + email1 + "&email2=" + hexemail1
             subject = "We Are Social - Reset User Account"
             resetlink = "<a href='" + resetlink + "'>" + resetlink + "</a>"
             reset_message = "<html><body><p>We are social, reset user account.</p> <p>Please click the following link to reset your password and activate your user account:</p><p>" + resetlink + "</p></body></html>"
@@ -171,9 +173,9 @@ def reset_user(request):
             email = EmailMessage(
                 subject,
                 reset_message,
-                'sender smtp gmail' + '<catkin.order@gmail.com>',
+                'sender smtp gmail' + '<johnarnold.wearesocial@gmail.com>',
                 [email1, 'arnold-j83@sky.com'],
-                headers={'Reply-To': 'catkin.order@gmail.com'}
+                headers={'Reply-To': 'johnarnold.wearesocial@gmail.com'}
             )
             email.content_subtype = 'html'
             email.send()
@@ -183,29 +185,12 @@ def reset_user(request):
                        "Thank you, an email has been sent to you containing details of how you can reset your account password and activate your account.")
 
     else:
-        #email = request.GET["email"]
         email = request.user.email
+        import hashlib
+        hashemail1 = hashlib.sha256("jatest" + email)
+        hexemail1 = hashemail1.hexdigest()
 
-        #hashemail = request.GET["email2"]
-        #import hashlib
-        #hashemail1 = hashlib.sha256("jatest" + email)
-        #hexemail1 = hashemail1.hexdigest()
-        #if hashemail == hexemail1:
-            #valid = True
-        #else:
-            #valid = False
-
-        #if valid:
-        #    form = UserResetForm(initial={'username': email, 'hashemail': hexemail1})
-        #    messages.success(request, "Please Click the Send Reset Email Button Below")
-        #    emailsent = False
-        #else:
-        #    form = UserResetForm()
-        #    messages.error(request, "An Error Has Occured, please go back and click the link again")
-        #    emailsent = True
-        form = UserResetForm(initial={'username': email, 'hashemail': email})
-        emailsent = False
-
+        form = UserResetForm(initial={'username': email, 'hashemail': hexemail1})
     args = {'form': form, 'emailsent': emailsent}
     args.update(csrf(request))
     return render(request, 'reset1.html', args)
