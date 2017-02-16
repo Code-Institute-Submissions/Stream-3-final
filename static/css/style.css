@@ -175,6 +175,11 @@
         padding-top: 50px;
     }
 
+    .bg-secondary {
+        background-color: #dbdbdb;
+        padding-top: 50px;
+    }
+
     .btn.outline {
         background: none;
         padding: 12px 22px;
