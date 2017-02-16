@@ -20,7 +20,7 @@
         <article>
             <section class="subject">
                 <h2><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></h2>
-                <p><a href="{% url 'threads' subject.id%}">{% autoescape off %} {{ subject.description }} {% endautoescape %}</a> </p>
+                {% autoescape off %}{{ subject.description }}{% endautoescape %}
             </section>
             <div class="col-md-4">
                 <section>Number of Live Debates in this Forum: <strong>{{ subject|get_total_subject_threads }}</strong></section>
