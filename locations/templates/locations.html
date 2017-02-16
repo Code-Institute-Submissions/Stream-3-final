@@ -54,16 +54,16 @@
                 {% for map_item in map_details %}
                     <tr>
                         <td>{{ map_item.name }}</td>
-                        <td><a class="btn btn-primary locationButton" id="location2" title="{{ map_item.center1 }},{{ map_item.center2 }}">View Map</a></td>
-                        <td><a class="zoomButton" title="{{ map_item.center1 }},{{ map_item.center2 }}" id="zoomIn"><i class="fa fa-search-plus fa-2x" aria-hidden="true"></i></a>
-                            <a class="zoomButton" title="{{ map_item.center1 }},{{ map_item.center2 }}" id="zoomOut"><i class="fa fa-search-minus fa-2x" aria-hidden="true"></i></a></td>
+                        <td><a class="btn btn-primary locationButton" title="{{ map_item.center1 }},{{ map_item.center2 }}">View Map</a></td>
+                        <td><a class="zoomButton" title="{{ map_item.center1 }},{{ map_item.center2 }}" ><i class="fa fa-search-plus fa-2x" aria-hidden="true"></i></a>
+                            <a class="zoomButton" title="{{ map_item.center1 }},{{ map_item.center2 }}" ><i class="fa fa-search-minus fa-2x" aria-hidden="true"></i></a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
             </table>
         </div>
         <div class="col-md-6">
-            <img class="img-thumbnail img-responsive" id="mapImage" src="https://maps.googleapis.com/maps/api/staticmap?center=51.4989098,0.0063561&zoom=12&maptype=terrain&size=400x400&key=AIzaSyBU_PttTHHVTJvyAzro3qNihkeh9oxkFmY" />
+            <img class="img-thumbnail img-responsive" alt="Map Of: {{ map_item.name }}" id="mapImage" src="https://maps.googleapis.com/maps/api/staticmap?center=51.4989098,0.0063561&zoom=12&maptype=terrain&size=400x400&key=AIzaSyBU_PttTHHVTJvyAzro3qNihkeh9oxkFmY" />
         </div>
     </div>
 {% endblock %}

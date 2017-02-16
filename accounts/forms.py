@@ -8,8 +8,10 @@ class UserRegistrationForm(UserCreationForm):
 
     MONTH_ABBREVIATIONS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June',
         'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
-    MONTH_CHOICES = list(enumerate(MONTH_ABBREVIATIONS, 1))
-    YEAR_CHOICES = [(i, i) for i in xrange(2017, 2040)]
+    MONTH_CHOICES = [(u'', u'Select Expiry Month')]
+    MONTH_CHOICES.extend(list(enumerate(MONTH_ABBREVIATIONS, 1)))
+    YEAR_CHOICES = [(u'', u'Select Expiry Year')]
+    YEAR_CHOICES.extend([(i, i) for i in xrange(2017, 2040)])
     email = forms.EmailField(label='Your Email Address (Must Be A Valid Email Address)', required='required')
     credit_card_number = forms.CharField(label='Credit OR Debit Card Number', required='required')
     cvv = forms.IntegerField(label='Card Security Code (A 3 Digit Code On The Back Of Your Card)', max_value=999, required='required')

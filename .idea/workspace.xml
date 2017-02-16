@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="21416696-5661-4180-89ff-e69ecd8b0599" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/blogposts.html" afterPath="$PROJECT_DIR$/blog/templates/blogposts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flat_pages/templates/flatpages.html" afterPath="$PROJECT_DIR$/flat_pages/templates/flatpages.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/we_are_social/settings.py" afterPath="$PROJECT_DIR$/we_are_social/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/forms.py" afterPath="$PROJECT_DIR$/accounts/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/register.html" afterPath="$PROJECT_DIR$/accounts/templates/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contactform/forms.py" afterPath="$PROJECT_DIR$/contactform/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/locations/templates/locations.html" afterPath="$PROJECT_DIR$/locations/templates/locations.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/threads/templates/forum/forum.html" afterPath="$PROJECT_DIR$/threads/templates/forum/forum.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,28 +26,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="264" column="20" lean-forward="false" selection-start-line="264" selection-start-column="20" selection-end-line="264" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/accounts/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="20" column="95" lean-forward="false" selection-start-line="20" selection-start-column="95" selection-end-line="20" selection-end-column="95" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/we_are_social/settings.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,19 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contactform/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="95" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="flatpages.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="flatpages.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flat_pages/templates/flatpages.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -90,12 +58,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base-home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base-home.html">
+      <file leaf-file-name="forum.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/threads/templates/forum/forum.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-33">
-              <caret line="129" column="9" lean-forward="false" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
+            <state relative-caret-position="103">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="locations.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/locations/templates/locations.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="65" column="84" lean-forward="false" selection-start-line="65" selection-start-column="84" selection-end-line="65" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/contactform/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="7" column="114" lean-forward="false" selection-start-line="7" selection-start-column="114" selection-end-line="7" selection-end-column="114" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/accounts/templates/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/accounts/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="10" column="43" lean-forward="false" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,16 +129,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="82" column="13" lean-forward="false" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/home/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -178,7 +180,6 @@
         <option value="$PROJECT_DIR$/contactform/urls.py" />
         <option value="$PROJECT_DIR$/contactform/serializer.py" />
         <option value="$PROJECT_DIR$/blog/templates/postdetail.html" />
-        <option value="$PROJECT_DIR$/locations/templates/locations.html" />
         <option value="$PROJECT_DIR$/threads/templates/forum/threads.html" />
         <option value="$PROJECT_DIR$/threads/templates/forum/thread.html" />
         <option value="$PROJECT_DIR$/contactform/views.py" />
@@ -187,7 +188,6 @@
         <option value="$PROJECT_DIR$/accounts/templates/resetuser.html" />
         <option value="$PROJECT_DIR$/accounts/templates/profile.html" />
         <option value="$PROJECT_DIR$/accounts/templates/reset1.html" />
-        <option value="$PROJECT_DIR$/accounts/templates/register.html" />
         <option value="$PROJECT_DIR$/contactform/templates/contact_form.html" />
         <option value="$PROJECT_DIR$/we_are_social/urls.py" />
         <option value="$PROJECT_DIR$/polls/urls.py" />
@@ -195,10 +195,7 @@
         <option value="$PROJECT_DIR$/threads/templatetags/thread_extras.py" />
         <option value="$PROJECT_DIR$/home/views.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/threads/templates/forum/forum.html" />
         <option value="$PROJECT_DIR$/accounts/views.py" />
-        <option value="$PROJECT_DIR$/contactform/forms.py" />
-        <option value="$PROJECT_DIR$/accounts/forms.py" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/home/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/base-home.html" />
@@ -208,6 +205,11 @@
         <option value="$PROJECT_DIR$/blog/templates/blogposts.html" />
         <option value="$PROJECT_DIR$/we_are_social/settings.py" />
         <option value="$PROJECT_DIR$/flat_pages/templates/flatpages.html" />
+        <option value="$PROJECT_DIR$/threads/templates/forum/forum.html" />
+        <option value="$PROJECT_DIR$/locations/templates/locations.html" />
+        <option value="$PROJECT_DIR$/contactform/forms.py" />
+        <option value="$PROJECT_DIR$/accounts/templates/register.html" />
+        <option value="$PROJECT_DIR$/accounts/forms.py" />
       </list>
     </option>
   </component>
@@ -218,8 +220,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="y" value="391" />
+    <option name="x" value="131" />
+    <option name="y" value="135" />
     <option name="width" value="1932" />
     <option name="height" value="582" />
   </component>
@@ -943,7 +945,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="391" width="1932" height="582" extended-state="0" />
+    <frame x="131" y="135" width="1932" height="582" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25587606" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1141,14 +1143,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/locations/templates/locations.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="922">
-          <caret line="65" column="228" lean-forward="true" selection-start-line="65" selection-start-column="73" selection-end-line="65" selection-end-column="228" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1255,14 +1249,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/templates/reset1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89">
@@ -1327,14 +1313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/threads/templates/forum/forum.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contactform/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1348,26 +1326,6 @@
         <state relative-caret-position="792">
           <caret line="167" column="54" lean-forward="false" selection-start-line="167" selection-start-column="54" selection-end-line="167" selection-end-column="54" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contactform/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="95" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="20" column="95" lean-forward="false" selection-start-line="20" selection-start-column="95" selection-end-line="20" selection-end-column="95" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1444,6 +1402,50 @@
         <state relative-caret-position="170">
           <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threads/templates/forum/forum.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locations/templates/locations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="65" column="84" lean-forward="false" selection-start-line="65" selection-start-column="84" selection-end-line="65" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contactform/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="114" lean-forward="false" selection-start-line="7" selection-start-column="114" selection-end-line="7" selection-end-column="114" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="43" lean-forward="false" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
