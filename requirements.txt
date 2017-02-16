@@ -1,5 +1,6 @@
 arrow==0.10.0
 beautifulsoup4==4.5.3
+dj-database-url==0.2.1
 Django==1.10.5
 django-bootstrap-breadcrumbs==0.8.2
 django-ckeditor==5.2.1
