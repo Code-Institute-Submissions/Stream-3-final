@@ -110,8 +110,10 @@
         <entry file="file://$PROJECT_DIR$/templates/footer.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="126" lean-forward="false" selection-start-line="3" selection-start-column="126" selection-end-line="3" selection-end-column="126" />
-              <folding />
+              <caret line="3" column="117" lean-forward="false" selection-start-line="3" selection-start-column="117" selection-end-line="3" selection-end-column="117" />
+              <folding>
+                <element signature="e#76#82#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,8 +214,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="46" />
-    <option name="y" value="496" />
+    <option name="x" value="54" />
+    <option name="y" value="506" />
     <option name="width" value="1932" />
     <option name="height" value="582" />
   </component>
@@ -937,7 +939,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="46" y="496" width="1932" height="582" extended-state="0" />
+    <frame x="54" y="506" width="1932" height="582" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25587606" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1436,8 +1438,10 @@
     <entry file="file://$PROJECT_DIR$/templates/footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="126" lean-forward="false" selection-start-line="3" selection-start-column="126" selection-end-line="3" selection-end-column="126" />
-          <folding />
+          <caret line="3" column="117" lean-forward="false" selection-start-line="3" selection-start-column="117" selection-end-line="3" selection-end-column="117" />
+          <folding>
+            <element signature="e#76#82#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
