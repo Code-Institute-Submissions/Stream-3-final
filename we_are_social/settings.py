@@ -92,7 +92,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-#DATABASES['default'] = dj_database_url.parse("mysql://b76d56028a15a5:1d4b1eb5@eu-cdbr-west-01.cleardb.com/heroku_3edb732d491a90a")
+DATABASES['default'] = dj_database_url.parse("mysql://b76d56028a15a5:1d4b1eb5@eu-cdbr-west-01.cleardb.com/heroku_3edb732d491a90a")
 
 AUTH_PASSWORD_VALIDATORS = [
     {
