@@ -18,10 +18,12 @@
     {% render_breadcrumbs %}
     {% for subject in subjects %}
         <article>
-            <section class="subject">
+            <div class="col-md-12">
+                <section class="subject">
                 <h2><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></h2>
                 {% autoescape off %}{{ subject.description }}{% endautoescape %}
             </section>
+            </div>
             <div class="col-md-4">
                 <section><h3>Number of Live Debates in this Forum: <strong>{{ subject|get_total_subject_threads }}</strong></h3></section>
             </div>
@@ -29,7 +31,7 @@
                 <section><h3>Number of Posts: <strong>{{ subject|get_total_subject_posts }}</strong></h3></section>
             </div>
             <div class="col-md-4">
-                <a class="btn btn-info" href="{% url 'threads' subject.id%}">Enter Forum</a></h3>
+                <a class="btn btn-info" href="{% url 'threads' subject.id%}">Enter Forum</a>
             </div>
         </article>
 {% endfor %}

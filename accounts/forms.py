@@ -20,7 +20,7 @@ class UserRegistrationForm(UserCreationForm):
     stripe_id = forms.CharField(widget=forms.HiddenInput)
     password1 = forms.CharField(label='Please Select a Password (Minimum 8 Characters Long and a Mixture of Letters and Numbers)', widget=forms.PasswordInput(), required='required')
     password2 = forms.CharField(label='Password Confirmation', widget=forms.PasswordInput(), required='required')
-    captcha = MathCaptchaField(label='Please Answer This Math Problem to Prove Your Are Human')
+    captcha = MathCaptchaField(label='Please Answer This Math Problem to Prove Your Are Human', required=True)
     def clean_password1(self):
         password1 = self.cleaned_data.get('password1')
         if len(password1) < 8:
