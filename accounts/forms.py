@@ -18,6 +18,33 @@ class UserRegistrationForm(UserCreationForm):
     password1 = forms.CharField(label='Please Select a Password (Minimum 8 Characters Long and a Mixture of Letters and Numbers)', widget=forms.PasswordInput(), required='required')
     password2 = forms.CharField(label='Password Confirmation', widget=forms.PasswordInput(), required='required')
 
+    def clean_password1(self):
+        password1 = self.cleaned_data.get('password1')
+        if len(password1) < 8:
+            raise ValidationError("Password must be at least 8 chars.")
+        #check for number
+        if not any(char.isdigit() for char in password1):
+            raise ValidationError('Password must contain at least 1 digit.')
+
+        # check for letter
+        if not any(char.isalpha() for char in password1):
+            raise ValidationError('Password must contain at least 1 letter.')
+        return password1
+
+    def clean_password2(self):
+        password1 = self.cleaned_data.get('password2')
+        if len(password1) < 8:
+            raise ValidationError("Password must be at least 8 chars.")
+            # check for number
+            if not any(char.isdigit() for char in password2):
+                raise ValidationError('Password must contain at least 1 digit.')
+
+            # check for letter
+            if not any(char.isalpha() for char in password2):
+                raise ValidationError('Password must contain at least 1 letter.')
+            return password1
+        return password1
+
     class Meta:
         model = User
         fields = ['email', 'password1', 'password2', 'stripe_id']
