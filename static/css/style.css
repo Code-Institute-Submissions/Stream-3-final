@@ -222,6 +222,11 @@
         max-height: 600px;
     }
 
+    .img-circle {
+        width: 100px;
+        height:100px;
+    }
+
     .alert-fixed {
         position:fixed;
         top: 50px;
