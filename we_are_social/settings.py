@@ -61,6 +61,8 @@ SOUTH_MIGRATION_MODULES = {
     'captcha': 'captcha.south_migrations',
 }
 
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

@@ -2,9 +2,10 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from accounts.models import User
 from django.core.exceptions import ValidationError
+from simplemathcaptcha.fields import MathCaptchaField
 
 class UserRegistrationForm(UserCreationForm):
-
+    captcha = MathCaptchaField(label='Please Answer This Math Problem to Prove Your Are Human')
     MONTH_ABBREVIATIONS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June',
         'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
     MONTH_CHOICES = list(enumerate(MONTH_ABBREVIATIONS, 1))
