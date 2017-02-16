@@ -91,10 +91,6 @@ DATABASES = {
     }
 }
 DATABASES['default'] = dj_database_url.parse("mysql://b76d56028a15a5:1d4b1eb5@eu-cdbr-west-01.cleardb.com/heroku_3edb732d491a90a")
-#mysql://b76d56028a15a5:1d4b1eb5@eu-cdbr-west-01.cleardb.com/heroku_3edb732d491a90a?reconnect=true
-
-# Password validation
-# https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -103,7 +99,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
         'OPTIONS': {
-            'min_length': 9,
+            'min_length': 8,
         }
     },
     {
