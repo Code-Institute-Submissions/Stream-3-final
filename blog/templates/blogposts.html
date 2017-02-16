@@ -13,9 +13,12 @@
                     <div class="row">
                         <hr>
                         <div class="col-md-2 col-sm-3 text-center">
-                            <a class="story-img" href="#">
-                                <img src="http://placehold.it/100" class="img-circle" alt="Blog Post {{ post.title }}">
-                            </a>
+                            {% if post.image %}
+                            <div class="col-md-2 col-sm-3 text-center">
+                                <img src="http://placehold.it/100" class="img-circle" alt="{{ post.title }}">
+                            </div>
+                            {% endif %}
+
                         </div>
                         <div class="col-md-10 col-sm-9">
                             <h3>{{ post.title }}</h3>
