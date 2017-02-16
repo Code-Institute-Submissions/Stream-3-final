@@ -16,12 +16,11 @@
                     <a href="{% url 'threads' forum_subject.id %}"><h4 class="homeHeading">{{ forum_subject.name }}</h4></a>
                 </div>
                 <div class="col-md-6">
-                    <section><p  class="homeHeading"># Live Debates: <strong>{{ forum_subject|get_total_subject_threads }}</strong></p></section>
+                    <p  class="homeHeading"># Live Debates: <strong>{{ forum_subject|get_total_subject_threads }}</strong></p>
                 </div>
                 <div class="col-md-6">
-                    <section><p  class="homeHeading"># Posts: <strong>{{ forum_subject|get_total_subject_posts }}</strong></p></section>
+                    <p  class="homeHeading"># Posts: <strong>{{ forum_subject|get_total_subject_posts }}</strong></p>
                 </div>
-
             </article>
         </div>
         {% endautoescape %}
