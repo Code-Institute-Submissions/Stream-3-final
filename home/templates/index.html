@@ -4,10 +4,8 @@
     <h3 class="homeHeading">{{ posts.title }}</h3>
     <p class="homeHeading">{{ posts.content |truncatewords:40 }}</p>
 {% endblock %}
-
 {% block content_home_forum %}
     <h3 class="homeHeading">There are: {{ forum_subjects.count }} Live Forums</h3>
-
     {% for forum_subject in forum_subjects %}
         {% autoescape off %}
         <div class="box">
@@ -29,7 +27,6 @@
         <a class="btn btn-primary outline" href="/forum/">Enter the Forum</a>
     </div>
 {% endblock %}
-
 {% block content %}
     <section class="bg-primary" id="about">
         <div class="container">
@@ -42,7 +39,6 @@
             </div>
         </div>
     </section>
-
     <section class="bg-secondary">
         <div class="container">
             <div class="col-md-12 text-center">

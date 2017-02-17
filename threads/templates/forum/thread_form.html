@@ -9,15 +9,11 @@
 </script>
 <script type="text/javascript">
     $(function(){
-
-
         if(!$('#id_is_a_poll').is('checked')) {
             $('#poll_form').hide()
 
         }
-
         $('#id_question').removeAttr('required');
-
         $('#id_is_a_poll').click(function(el) {
             var poll_form = $('#poll_form')
             if(!$('#id_is_a_poll').prop('checked')) {
@@ -29,14 +25,6 @@
                 poll_form.show()
                 $('#id_question').attr('required', 'required');
             }
-
-
-
-            /*if(poll_form.is(":visible")) {
-                poll_form.hide()
-            } else {
-                poll_form.show()
-            }*/
         })
     })
 </script>

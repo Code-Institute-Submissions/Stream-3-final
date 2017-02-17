@@ -1,7 +1,6 @@
 from rest_framework import serializers
 from .models import mapDetails
 
-
 class mapDetailsSerializer(serializers.ModelSerializer):
 
     class Meta:

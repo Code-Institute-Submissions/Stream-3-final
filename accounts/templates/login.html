@@ -2,8 +2,6 @@
 {% load bootstrap_tags %}
 {% load staticfiles %}
 {% block head_js %}
-
-
 {% endblock %}
 {% block content_header %}
 <h1 class="homeHeading">Log In</h1>
@@ -21,7 +19,7 @@
             </button>
           </div>
           <div class="modal-body">
-              <form method="POST" id="loginForm" name="loginForm">
+            <form method="POST" id="loginForm" name="loginForm">
                 <fieldset>
                     <legend>Login to We Are Social</legend>
                     {% csrf_token %}
@@ -42,7 +40,7 @@
           </div>
         </div>
       </div>
-</div>
+    </div>
     <script type="text/javascript">
         $( document ).ready(function() {
             $('#loginModal').modal('show');

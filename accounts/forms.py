@@ -38,11 +38,9 @@ class UserRegistrationForm(UserCreationForm):
         password1 = self.cleaned_data.get('password2')
         if len(password1) < 8:
             raise ValidationError("Password must be at least 8 chars.")
-            # check for number
             if not any(char.isdigit() for char in password2):
                 raise ValidationError('Password must contain at least 1 digit.')
 
-            # check for letter
             if not any(char.isalpha() for char in password2):
                 raise ValidationError('Password must contain at least 1 letter.')
             return password1
@@ -60,20 +58,18 @@ class UserRegistrationForm(UserCreationForm):
         if password1 and password2 and password1 != password2:
             message = "Passwords do not match"
             raise ValidationError(message)
-
         return password2
 
     def save(self, commit=True):
         instance = super(UserRegistrationForm, self).save(commit=False)
         instance.username = instance.email
-
         if commit:
             instance.save()
         return instance
 
 class UserLoginForm(forms.Form):
     email = forms.EmailField()
-    password  = forms.CharField(widget=forms.PasswordInput)
+    password = forms.CharField(widget=forms.PasswordInput)
 
 class UserResetForm(forms.Form):
     username = forms.CharField(label="User Email", widget=forms.TextInput(attrs={'readonly': 'readonly'}))

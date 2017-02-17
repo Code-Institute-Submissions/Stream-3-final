@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages, auth
 from accounts.forms import UserRegistrationForm, UserLoginForm, UserResetForm, ResetPasswordForm
-from django.core.urlresolvers import reverse
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
@@ -10,11 +9,10 @@ import datetime
 import stripe
 import arrow
 import json
-from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 from models import User
 from django.utils.safestring import mark_safe
-from  django.core.mail import EmailMessage
+from django.core.mail import EmailMessage
 
 stripe.api_key = settings.STRIPE_SECRET
 
@@ -38,16 +36,13 @@ def register(request):
         else:
             if form.is_valid():
                 try:
-                    #customer = stripe.Charge.create(amount=499, currency='GBP', description=form.cleaned_data['email'], card=form.cleaned_data['stripe_id'],)
                     customer = stripe.Customer.create(email=form.cleaned_data['email'], card=form.cleaned_data['stripe_id'], plan='we_are_social_monthly',)
                     print "customer:",customer
                 except stripe.error.CardError, e:
                     messages.error(request, 'Your card was declined!')
                 if customer:
-                #if customer.paid:
                     user = form.save()
-                    #user = auth.authenticate(email=request.POST.get('email'), password=request.POST.get('password1'))
-                    user.stripe_id = customer.id#customer.stripe_id
+                    user.stripe_id = customer.id
                     user.subscription_end = arrow.now().replace(days=+31).datetime
                     user.save()
                     if user:
@@ -63,7 +58,6 @@ def register(request):
     else:
         today = datetime.date.today()
         form = UserRegistrationForm()
-
     args = {'form': form, 'publishable': settings.STRIPE_PUBLISHABLE}
     args.update(csrf(request))
     return render(request, 'register.html', args)
@@ -79,7 +73,6 @@ def cancel_subscription(request):
 
 @login_required(login_url='/login/')
 def profile(request):
-
     return render(request, 'profile.html')
 
 def login(request):
@@ -89,21 +82,17 @@ def login(request):
         login_message = ""
         if form.is_valid():
             user = auth.authenticate(email=request.POST.get('email'), password=request.POST.get('password'), allownopassword=False)
-
             if user is not None:
                 auth.login(request, user)
                 messages.error(request, "You have successfully logged in")
                 login_message = "You have successfully logged in"
                 return HttpResponse("You have successfully logged in")
-                #return redirect(reverse('profile'))
             else:
                 subemail=request.POST.get('email')
                 userExists = User.objects.filter(email=subemail)
-
                 import hashlib
                 hashemail = hashlib.sha256("jatest" + subemail)
                 hexemail = hashemail.hexdigest()
-
                 if userExists:
                     domain = request.META.get('HTTP_HOST')
                     if domain == "127.0.0.1:8000":
@@ -115,7 +104,6 @@ def login(request):
 
                     messages.error(request, mark_safe(
                         "Your email is recognised, but your password is incorrect.  Please try again.  If you have forgotten your password, <a href='" + resetlink + "' title='Click Here to Reset Your Password'>Reset You Password</a>."))
-
                     return HttpResponse(mark_safe("Your email is recognised, but your password is incorrect.  Please try again.  If you have forgotten your password, <a href='" + resetlink + "' title='Click Here to Reset Your Password'>Reset You Password</a>."))
                 else:
                     messages.error(request, "User Not Recognised")
@@ -136,10 +124,8 @@ def subscriptions_webhook(request):
         cust = event_json['object']['customer']
         paid = event_json['object']['paid']
         user = User.objects.get(stripe_id=cust)
-
         if user and paid:
             user.subscription_end = arrow.now().replace(weeks=+4).datetime
-
     except stripe.InvalidRequestError, e:
         return HttpResponse(status=404)
     return HttpResponse(status=200)
@@ -159,7 +145,6 @@ def reset_user(request):
             valid = True
         else:
             valid = False
-
         if valid:
             print "valid"
             if domain == "127.0.0.1:8000":
@@ -169,7 +154,6 @@ def reset_user(request):
             subject = "We Are Social - Reset User Account"
             resetlink = "<a href='" + resetlink + "'>" + resetlink + "</a>"
             reset_message = "<html><body><p>We are social, reset user account.</p> <p>Please click the following link to reset your password and activate your user account:</p><p>" + resetlink + "</p></body></html>"
-
             email = EmailMessage(
                 subject,
                 reset_message,
@@ -179,7 +163,6 @@ def reset_user(request):
             )
             email.content_subtype = 'html'
             email.send()
-
             emailsent = True
             messages.success(request,
                        "Thank you, an email has been sent to you containing details of how you can reset your account password and activate your account.")
@@ -189,12 +172,10 @@ def reset_user(request):
         import hashlib
         hashemail1 = hashlib.sha256("jatest" + email)
         hexemail1 = hashemail1.hexdigest()
-
         form = UserResetForm(initial={'username': email, 'hashemail': hexemail1})
     args = {'form': form, 'emailsent': emailsent}
     args.update(csrf(request))
     return render(request, 'reset1.html', args)
-
 def reset(request):
     domain = request.META.get('HTTP_HOST')
     if request.method == "POST":
