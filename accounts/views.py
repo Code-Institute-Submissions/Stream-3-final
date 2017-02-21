@@ -168,9 +168,11 @@ def reset_user(request):
                        "Thank you, an email has been sent to you containing details of how you can reset your account password and activate your account.")
 
     else:
-        email = request.GET['email']
-        if email == "":
+        if request.method == 'GET' and 'email' in request.GET:
+            email = request.GET['email']
+        else:
             email = request.user.email
+
         import hashlib
         hashemail1 = hashlib.sha256("jatest" + email)
         hexemail1 = hashemail1.hexdigest()

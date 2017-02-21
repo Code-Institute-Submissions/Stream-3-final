@@ -28,6 +28,12 @@ We Are Social is a collection of Apps, which are packages that provide a set of 
 
 #Register
 - (https://johnarnold-stream3.herokuapp.com/register/) Users can Register with We Are Social which requires a monthly subscription fee of £2.
+Payments are made using [Stripe](https://stripe.com/] Payment API.  As this website is fictitious, all payments use the test mode.  When attempting to Register, a Card Number of 4242424242424242, CVV of 123 and an expiry date in the future should work sufficiently.
+The registration form features a {Captcha Control](https://djangopackages.org/packages/p/django-simple-math-captcha/) which asks a simple Math question.  This is to prevent robots attempting to log in.
+#Login
+- (https://johnarnold-stream3.herokuapp.com/login/) the login page features a login form in a Bootstrap Modal window.  The page uses JQuery to open the login modal on entering the page.  The login form is submitted via AJAX, so that the modal window does not close upon logging in.  Login success or failure messages are displayed with the modal window.
+- If your login is not successful but an account with the supplied email address is supplied, you will receive a link to reset your password.  If you follow the link, you will see
+
 
 #Profile
 - (https://johnarnold-stream3.herokuapp.com/profile/) - When you register or log in, you are redirected to you profile page
