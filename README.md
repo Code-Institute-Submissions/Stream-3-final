@@ -16,12 +16,17 @@ We are social required a monthly subscription payable using Stripe.
 - [Bootstrap](http://getbootstrap.com/)
     - We use **Bootstrap** to give our project a simple, responsive layout
 - [Python] (https://www.python.org/) A powerful and fast Object Oriented Programming Language
-- [Python Django] (https://www.djangoproject.com/) A high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+- [Python Django] (https://www.djangoproject.com/) A high-level Python Web framework that encourages rapid development and clean, pragmatic design.  The Django Framework is built around the Model View Control architecture.
 - [MySQL](https://www.mysql.com/) An Open Source Database Management System.
 
 
 ##Pages in Detail
 
+We Are Social is a collection of Apps, which are packages that provide a set of features.  Apps include a combination of model classes, views, form classes, template tags, static files, URL's and Middleware.
 #Home Page
 (http://johnarnold-stream3.herokuapp.com/) Offers a vibrant introduction to the website with links into the facilities available to members.
 
+#About We Are Social
+(http://johnarnold-stream3.herokuapp.com/pages/about/) Gives an overview of the We Are Social Organisation and what a social enterprise is.  This application uses [Flat Pages] (https://docs.djangoproject.com/en/1.10/ref/contrib/flatpages/) which is HTML content in a database.
+
+#
