@@ -59,3 +59,5 @@ The registration form features a [Captcha Control](https://djangopackages.org/pa
 #Contact
 (https://johnarnold-stream3.herokuapp.com/contact/) Gives subscribers and other visitors the means to communicate with We Are Social.  The form features a simple [Captcha Control](https://djangopackages.org/packages/p/django-simple-math-captcha/) which asks a simple Math question, this is to prevent robots and other spammers sending spam email.
 
+#Instructions for use
+If you clone we are social and run the code locally, you will need to specify which of the settings files you wish to use. For example: python manage.py runserver --settings=settings.dev
