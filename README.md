@@ -49,3 +49,6 @@ The registration form features a {Captcha Control](https://djangopackages.org/pa
 
 #Blog
 (https://johnarnold-stream3.herokuapp.com/blog/) Logged in Users are able to create Blog Posts.  Other users are able to discus blog posts using [Disqus](https://disqus.com/) A tool for powering discussions.
+
+#Forum
+(https://johnarnold-stream3.herokuapp.com/forum/) Super Users are able to create Forum subjects within the admin area.
