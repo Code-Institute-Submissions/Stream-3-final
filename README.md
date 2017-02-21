@@ -26,6 +26,12 @@ We Are Social is a collection of Apps, which are packages that provide a set of 
 #Home Page
 (http://johnarnold-stream3.herokuapp.com/) Offers a vibrant introduction to the website with links into the facilities available to members.
 
+#Register
+- (https://johnarnold-stream3.herokuapp.com/register/) Users can Register with We Are Social which requires a monthly subscription fee of £2.
+
+#Profile
+- (https://johnarnold-stream3.herokuapp.com/profile/) - When you register or log in, you are redirected to you profile page
+
 #About We Are Social
 (http://johnarnold-stream3.herokuapp.com/pages/about/) Gives an overview of the We Are Social Organisation and what a social enterprise is.  This application uses [Flat Pages] (https://docs.djangoproject.com/en/1.10/ref/contrib/flatpages/) which is HTML content in a database.
 
