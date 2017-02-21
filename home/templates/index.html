@@ -2,8 +2,8 @@
 {% load thread_extras %}
 {% block content_home_blog %}
     {% autoescape off %}
-    <h3 class="homeHeading">{{ posts.title }}</h3>
-    <p class="homeHeading">{{ posts.content |truncatewords:40 }}</p>
+    <h3 class="homeHeading">{{ posts.title|striptags }}</h3>
+    <p class="homeHeading">{{ posts.content |truncatewords:40|striptags }}</p>
     {% endautoescape %}
 {% endblock %}
 {% block content_home_forum %}
