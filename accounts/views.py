@@ -198,7 +198,17 @@ def reset(request):
     else:
         reset = False
         email1 = request.GET['email']
+        email2 = request.GET['email2']
+
+        import hashlib
+        hashemail1 = hashlib.sha256("jatest" + email1)
+        hexemail1 = hashemail1.hexdigest()
+        if email2 == hexemail1:
+            valid = True
+        else:
+            valid = False
+        print "valid:",valid
         form = ResetPasswordForm(initial={'username': email1})
-    args = {'form': form, 'reset': reset}
+    args = {'form': form, 'reset': reset, 'valid': valid}
     args.update(csrf(request))
     return render(request, 'resetuser.html', args)

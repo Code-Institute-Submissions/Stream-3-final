@@ -18,8 +18,10 @@
 {% block content %}
 <div class="container">
     <p class="hidden" id="preset">{{ reset }}</p>
+    <p>{{ valid }}</p>
+    {% if valid %}
     <form role="form" method="post" id="catkin-reset-form" action="{% url 'reset' %}">
-        <legend>Reset User Account 1</legend>
+        <legend>Reset User Account</legend>
             {% csrf_token %}
             {{ form |as_bootstrap }}
             <div class="form-group">
@@ -27,5 +29,8 @@
                 <input type="submit" class="btn btn-primary" id="Reset_Account" name="reset_account" value="Reset Account">
             </div>
     </form>
+    {% else %}
+    <h2>An Error Has Occured, Please retry the link in the email.  If this problem continues, please <a href="{% url 'contact'%}">Contact Us</a> for further assistance.</h2>
+    {% endif %}
 </div>
 {% endblock %}
