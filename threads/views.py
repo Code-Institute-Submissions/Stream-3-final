@@ -17,18 +17,15 @@ def forum(request):
 
 def threads(request, subject_id):
     subject = get_object_or_404(Subject, pk=subject_id)
-    print subject.id, subject.name, subject.threads.all
     args = {'subject': subject}
     return render(request, 'forum/threads.html', args)
 
 @login_required
 def new_thread(request, subject_id):
     subject = get_object_or_404(Subject, pk=subject_id)
-    print "subject_id:",subject_id
     poll_subject_formset = formset_factory(PollSubjectForm, extra=3)
     if request.method == 'POST':
         ispoll = request.POST.get('is_a_poll')
-        print "ispoll:",ispoll
         thread_form = ThreadForm(request.POST)
         post_form = PostForm(request.POST)
         if request.POST.get('is_a_poll', None):

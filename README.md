@@ -6,7 +6,7 @@
  
 This is an Python Website Website using the Django Framework
 ## The Website is Deployed Using Heroku
--[http://johnarnold-stream3.herokuapp.com/] (http://johnarnold-stream3.herokuapp.com/)
+-[http://johnarnold-stream3.herokuapp.com/] (http://johnarnold-stream3.herokuapp.com/)  The site uses a [GUnicorn WSGI HTTP Server](http://gunicorn.org/)
 
 ##Overview
 We Are Social is a fictitious Social Enterprise Website that allows the exchange of ideas that benefit both businesses and society as a whole.  The site is built using a Python Django Framework and features Blogs which allow discussions using disqus, forums which allow the exchange of ideas and discus projects using the forum app, users can also vote on ideas created in the forum.
@@ -29,7 +29,7 @@ We Are Social is a collection of Apps, which are packages that provide a set of 
 #Register
 - (https://johnarnold-stream3.herokuapp.com/register/) Users can Register with We Are Social which requires a monthly subscription fee of £2.
 Payments are made using [Stripe](https://stripe.com/] Payment API.  As this website is fictitious, all payments use the test mode.  When attempting to Register, a Card Number of 4242424242424242, CVV of 123 and an expiry date in the future should work sufficiently.
-The registration form features a {Captcha Control](https://djangopackages.org/packages/p/django-simple-math-captcha/) which asks a simple Math question.  This is to prevent robots attempting to log in.
+The registration form features a [Captcha Control](https://djangopackages.org/packages/p/django-simple-math-captcha/) which asks a simple Math question.  This is to prevent robots attempting to log in.
 
 #Login
 - (https://johnarnold-stream3.herokuapp.com/login/) the login page features a login form in a Bootstrap Modal window.  The page uses JQuery to open the login modal on entering the page.  The login form is submitted via AJAX, so that the modal window does not close upon logging in.  Login success or failure messages are displayed with the modal window.
@@ -51,4 +51,11 @@ The registration form features a {Captcha Control](https://djangopackages.org/pa
 (https://johnarnold-stream3.herokuapp.com/blog/) Logged in Users are able to create Blog Posts.  Other users are able to discus blog posts using [Disqus](https://disqus.com/) A tool for powering discussions.
 
 #Forum
-(https://johnarnold-stream3.herokuapp.com/forum/) Super Users are able to create Forum subjects within the admin area.
+(https://johnarnold-stream3.herokuapp.com/forum/) Super Users are able to create Forum Subjects within the admin area.  Logged in subscribers are able to create discussions and share ideas within the Forum Subject Areas.  Users are able to add polls for others to vote on.  Other users are able to add comments to discussions.
+
+#Locations
+(https://johnarnold-stream3.herokuapp.com/locations/) Shows out locations throughout the world using the google maps api.  JQuery is used to change map displayed.
+
+#Contact
+(https://johnarnold-stream3.herokuapp.com/contact/) Gives subscribers and other visitors the means to communicate with We Are Social.  The form features a simple [Captcha Control](https://djangopackages.org/packages/p/django-simple-math-captcha/) which asks a simple Math question, this is to prevent robots and other spammers sending spam email.
+
