@@ -13,7 +13,9 @@
                 <h3>{{ post.title }}</h3>
                 <div class="row">
                     <div class="col-xs-9">
+                        {% autoescape off %}
                         {{ post.content|linebreaks}}
+                        {% endautoescape %}
                         <p>
                             <button class="btn btn-default" onclick="location.href='/blog'">Back to Posts</button>
                             {% if user.is_superuser %}

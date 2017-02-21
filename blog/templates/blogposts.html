@@ -8,6 +8,7 @@
     <div class="container">
          <div class="col-md-12">
             {% for post in posts %}
+            {% autoescape off %}
                 <article>
                     <div class="row">
                         <hr>
@@ -25,7 +26,9 @@
                                     <p>{{ post.content |truncatewords:30 }}</p>
                                     <p>
                                         <button class="btn btn-default" onclick="location.href={{ post.id }}">Read More</button>
+                                        {% if user.is_authenticated %}
                                         <button class="btn btn-default" onclick="location.href='{% url 'new_blog_post' %}'">New Post</button>
+                                        {% endif %}
                                     </p>
                                     <p>{{ post.published_date }}</p>
                                 </div>
@@ -33,6 +36,7 @@
                         </div>
                     </div>
                 </article>
+            {% endautoescape %}
             {% endfor %}
         </div>
     </div>

@@ -48,3 +48,4 @@ The registration form features a {Captcha Control](https://djangopackages.org/pa
 (http://johnarnold-stream3.herokuapp.com/pages/about/) Gives an overview of the We Are Social Organisation and what a social enterprise is.  This application uses [Flat Pages] (https://docs.djangoproject.com/en/1.10/ref/contrib/flatpages/) which is HTML content in a database.
 
 #Blog
+(https://johnarnold-stream3.herokuapp.com/blog/) Logged in Users are able to create Blog Posts.  Other users are able to discus blog posts using [Disqus](https://disqus.com/) A tool for powering discussions.
