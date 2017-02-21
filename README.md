@@ -30,15 +30,21 @@ We Are Social is a collection of Apps, which are packages that provide a set of 
 - (https://johnarnold-stream3.herokuapp.com/register/) Users can Register with We Are Social which requires a monthly subscription fee of £2.
 Payments are made using [Stripe](https://stripe.com/] Payment API.  As this website is fictitious, all payments use the test mode.  When attempting to Register, a Card Number of 4242424242424242, CVV of 123 and an expiry date in the future should work sufficiently.
 The registration form features a {Captcha Control](https://djangopackages.org/packages/p/django-simple-math-captcha/) which asks a simple Math question.  This is to prevent robots attempting to log in.
+
 #Login
 - (https://johnarnold-stream3.herokuapp.com/login/) the login page features a login form in a Bootstrap Modal window.  The page uses JQuery to open the login modal on entering the page.  The login form is submitted via AJAX, so that the modal window does not close upon logging in.  Login success or failure messages are displayed with the modal window.
 - If your login is not successful but an account with the supplied email address is supplied, you will receive a link to reset your password.
+
 #Change Password / Reset User
 - (https://johnarnold-stream3.herokuapp.com/resetuser/) [The Change Password and Reset User Account] Page has a form which will send an email to the registered email account, which contains a link to another page to change the login password for that user account. This uses the SMTP service of a Gmail Account.
+
 #Change Password / Reset User
 - The email you receive has a link to reset your password.  The link has 2 arguments, the first being your email, the second is your email with a SALT appended to it and a sha256 one-way hashing algorithm added to it.  This is to prevent people from attampting to hack into the system or gain access to another persons account.
+
 #Profile
 - (https://johnarnold-stream3.herokuapp.com/profile/) - When you register or log in, you are redirected to you profile page.  This has details of you account such as your email address, when you joined and how long you have on your subscription.  This page also allows a user to reset their password and or cancel their subscription.
+
 #About We Are Social
 (http://johnarnold-stream3.herokuapp.com/pages/about/) Gives an overview of the We Are Social Organisation and what a social enterprise is.  This application uses [Flat Pages] (https://docs.djangoproject.com/en/1.10/ref/contrib/flatpages/) which is HTML content in a database.
+
 #Blog
