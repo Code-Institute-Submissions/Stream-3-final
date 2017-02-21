@@ -12,21 +12,7 @@
             var mapURL = "https://maps.googleapis.com/maps/api/staticmap?center=" + mapCentre + "&zoom=14&maptype=terrain&size=400x400&key=AIzaSyBU_PttTHHVTJvyAzro3qNihkeh9oxkFmY";
             $("#mapImage").attr('src', mapURL);
         });
-        $(".zoomButton").click(function() {
-            var imageURL = $("#mapImage").attr('src');
-            var buttonText = $(this).attr('id');
-            var mapCentre = $(this).attr('title');
-            var zoomNumber = imageURL.indexOf("zoom=");
-            var zoomNum = parseInt((imageURL.substring(zoomNumber, (zoomNumber + 7))).replace("zoom=",""));
-            if (buttonText == "zoomIn") {
-                zoomNum += 1;
-            }
-            else if (buttonText == "zoomOut"){
-                zoomNum -= 1;
-            }
-            var mapURL = "https://maps.googleapis.com/maps/api/staticmap?center=" + mapCentre + "&zoom=" + zoomNum + "&maptype=terrain&size=400x400&key=AIzaSyBU_PttTHHVTJvyAzro3qNihkeh9oxkFmY";
-            $("#mapImage").attr('src', mapURL);
-        });
+
     });
     </script>
     {% endautoescape %}
@@ -47,7 +33,6 @@
                 <tr>
                     <th>Office</th>
                     <th>View Map</th>
-                    <th>Zoom</th>
                 </tr>
             </thead>
                 <tbody>
@@ -55,8 +40,6 @@
                     <tr>
                         <td>{{ map_item.name }}</td>
                         <td><a class="btn btn-primary locationButton" title="{{ map_item.center1 }},{{ map_item.center2 }}">View Map</a></td>
-                        <td><a class="zoomButton" title="{{ map_item.center1 }},{{ map_item.center2 }}" ><i class="fa fa-search-plus fa-2x" aria-hidden="true"></i></a>
-                            <a class="zoomButton" title="{{ map_item.center1 }},{{ map_item.center2 }}" ><i class="fa fa-search-minus fa-2x" aria-hidden="true"></i></a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
